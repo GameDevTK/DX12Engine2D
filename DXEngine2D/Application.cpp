@@ -8,12 +8,16 @@
 
 #include "stdafx.h"
 #include "Application.h"
+#include "ObjectManager.h"
+#include "Renderer.h"
 
 /**
  * @brief   コンストラクタ
  */
 Application::Application()
-    : hWnd  (NULL)
+    : hWnd          (NULL)
+    , objectManager (nullptr)
+    , renderer      (nullptr)
 {
 
 }
@@ -30,26 +34,73 @@ Application::~Application()
  * @brief       初期化関数
  * @details     ゲームアプリケーション起動時の初期化処理
  */
-void Application::boot()
+void Application::Boot()
 {
-    initialize();
+    InitializeSystem();
+
+    // 継承先のゲームの初期化
+    Initialize();
 
     while (DispatchWindowMessage())
     {
-        // オブジェクトの更新
-        update();
+        // 共通システム更新
+        UpdateSystem();
+
+        // 継承先のゲーム更新
+        Update();
 
         // ドローコール
+        //renderer->Update()
+
     }
 
-    finalize();
+    Finalize();
 
 }
 
 /**
- * @brief	メッセージプロシージャ
- * @param[in]	hWnd	メッセージを送ってきたウィンドウのハンドル
- * @param[in]	msg		メッセージの種類
+ * @brief       システムの初期化
+ * @details     ゲームに依存しない共通初期化処理
+ */
+void Application::InitializeSystem()
+{
+    renderer = new Renderer();
+    renderer->Initialize();
+
+    objectManager = new ObjectManager();
+    objectManager->Initialize();
+
+
+}
+
+/**
+ * @brief       システムの更新
+ * @details     ゲームに依存しない共通更新処理
+ */
+void Application::UpdateSystem()
+{
+    // オブジェクトマネージャーの更新
+    objectManager->Update();
+}
+
+/**
+ * @brief       システムの終了処理
+ * @details     ゲームに依存しない共通終了処理
+ */
+void Application::FinalizeSystem()
+{
+    objectManager->Finalize();
+    SafeDelete(objectManager);
+
+    renderer->Finalize();
+    SafeDelete(renderer);
+
+}
+
+/**
+ * @brief       メッセージプロシージャ
+ * @param[in]   hWnd    メッセージを送ってきたウィンドウのハンドル
+ * @param[in]   msg     メッセージの種類
  * wParamとlParamは引数
  */
 LRESULT CALLBACK Application::MsgProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam)
@@ -67,9 +118,9 @@ LRESULT CALLBACK Application::MsgProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM
     return 0;
 }
 
-//==============================================================================
-// ウィンドウの初期化
-//==============================================================================
+/**
+ * @brief   ウィンドウの初期化
+ */
 void Application::InitWindow(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPWSTR lpCmdLine, int nCmdShow, const TCHAR* appName)
 {
     // ウィンドウクラスのパラメータを設定
@@ -111,9 +162,9 @@ void Application::InitWindow(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPWST
 
 }
 
-//==============================================================================
-// ウィンドウメッセージをディスパッチ
-//==============================================================================
+/**
+ * @brief   ウィンドウメッセージをディスパッチ
+ */
 bool Application::DispatchWindowMessage()
 {
     MSG msg = { 0 };
@@ -124,11 +175,20 @@ bool Application::DispatchWindowMessage()
             TranslateMessage(&msg);
             DispatchMessage(&msg);
         }
-        else 
+        else
         {
             // ウィンドウメッセージが空になった
             break;
         }
     }
     return msg.message != WM_QUIT;
+}
+
+/**
+ * @brief       生成したオブジェクトを、マネージャーに登録する
+ * @param[in]   object  登録するオブジェクトのポインタ
+ */
+void Application::RegisterObject(Object* object)
+{
+    objectManager->Register(object);
 }

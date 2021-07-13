@@ -15,11 +15,13 @@ public:
     SampleGame();
     ~SampleGame();
 
-    void initialize();
-    void update();
-    void finalize();
+    void Initialize();
+    void Update();
+    void Finalize();
 
 private:
+    class Player* player;
+
 
 };
 

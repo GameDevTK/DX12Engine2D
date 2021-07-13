@@ -26,7 +26,7 @@ int WINAPI wWinMain(
 
     game->InitWindow(hInstance, hPrevInstance, lpCmdLine, nCmdShow, TEXT("Game"));
 
-    game->boot();
+    game->Boot();
 
     SafeDelete(game);
 

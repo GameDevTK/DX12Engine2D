@@ -15,19 +15,33 @@ public:
     Application();
     ~Application();
 
-    void boot();
+    void Boot();
 
-protected:
-    virtual void initialize() = 0;
-    virtual void update() = 0;
-    virtual void finalize() = 0;
-
-public:
+    // Window
     static LRESULT CALLBACK MsgProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam);
     void InitWindow(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPWSTR lpCmdLine, int nCmdShow, const TCHAR* appName);
     bool DispatchWindowMessage();
 
+    // ObjectManager
+    void RegisterObject(class Object* object);
+
+protected:
+    virtual void Initialize() = 0;
+    virtual void Update() = 0;
+    virtual void Finalize() = 0;
+
 private:
+    // Sysytem
+    void InitializeSystem();
+    void UpdateSystem();
+    void FinalizeSystem();
+
+protected:
+    class ObjectManager* objectManager;
+    class Renderer* renderer;
+
+private:
+
     HWND hWnd;
 
 };
