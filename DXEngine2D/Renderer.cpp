@@ -12,6 +12,8 @@
 #pragma comment(lib,"d3d12.lib")
 #pragma comment(lib,"dxgi.lib")
 
+using namespace Microsoft::WRL;
+
 Renderer* Renderer::mInstance = nullptr;
 
 /**
@@ -99,23 +101,21 @@ void Renderer::Unregister(RenderComponent* renderComp)
 
 
 /**
- * @brief       DXGI(DirectX Graphics Infrastructure)を解除する
+ * @brief       DXGI(DirectX Graphics Infrastructure)Factoryを作成する
  * @details
  */
 IDXGIFactory4* Renderer::CreateDXGIFactory()
 {
     UINT dxgiFactoryFlags = 0;
 #ifdef _DEBUG
-    // デバッグコントローラ
-    // デバッグレイヤーがあるDXGIを作成する
-    ID3D12Debug* debugController;
-    if (SUCCEEDED(D3D12GetDebugInterface(IID_PPV_ARGS(&debugController))))
+    // デバッグレイヤーを有効にする
+    ComPtr<ID3D12Debug> debugController = nullptr;
+    if (SUCCEEDED(D3D12GetDebugInterface(IID_PPV_ARGS(debugController.ReleaseAndGetAddressOf()))))
     {
         debugController->EnableDebugLayer();
 
         // Enable additional debug layers.
         dxgiFactoryFlags |= DXGI_CREATE_FACTORY_DEBUG;
-        debugController->Release();
     }
 #endif
     IDXGIFactory4* factory;

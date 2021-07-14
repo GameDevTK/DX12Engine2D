@@ -8,6 +8,7 @@
 #pragma once
 
 #include "stdafx.h"
+#include <wrl.h>
 #include <dxgi.h>
 #include <dxgi1_2.h>
 #include <dxgi1_3.h>
@@ -58,6 +59,7 @@ public:
 
 
 private:
+    /// DXGI(DirectX Graphics Infrastructure)Factoryを作成する
     IDXGIFactory4* CreateDXGIFactory();
 
 
