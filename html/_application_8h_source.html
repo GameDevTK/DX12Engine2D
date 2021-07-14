@@ -1,0 +1,137 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>DXEngine2D: DXEngine2D/Application.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">DXEngine2D
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_ebf3202f220d7db70ca73d2a8dd11ed1.html">DXEngine2D</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Application.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_application_8h.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="stdafx_8h.html">stdafx.h</a>&quot;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="class_application.html">   12</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_application.html">Application</a></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;{</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <a class="code" href="class_application.html#afa8cc05ce6b6092be5ecdfdae44e05f8">Application</a>();</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <a class="code" href="class_application.html#a748bca84fefb9c12661cfaa2f623748d">~Application</a>();</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_application.html#a8429472801f7fc084e388a4ac84fd753">Boot</a>();</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="comment">// Window</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keyword">static</span> LRESULT CALLBACK <a class="code" href="class_application.html#a06ce223db894cb2d1bdb21998b64ae18">MsgProc</a>(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_application.html#a71afeb0e0004041abdd9090204dc0da6">InitWindow</a>(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPWSTR lpCmdLine, <span class="keywordtype">int</span> nCmdShow, <span class="keyword">const</span> TCHAR* appName);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_application.html#ad8f6f5be192bdf2d81cb5c852993a889">DispatchWindowMessage</a>();</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="comment">// ObjectManager</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_application.html#a5fee66ae0ed8fce51bfb6427eee1c488">RegisterObject</a>(<span class="keyword">class</span> <a class="code" href="class_object.html">Object</a>* <span class="keywordtype">object</span>);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="class_application.html#aef53dc18b48d8ae5e7fc35a6c7ae5059">   29</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_application.html#aef53dc18b48d8ae5e7fc35a6c7ae5059">Initialize</a>() = 0;</div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="class_application.html#a6b6a0f3dee7a353f28d3f3fec6a4cb89">   30</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_application.html#a6b6a0f3dee7a353f28d3f3fec6a4cb89">Update</a>() = 0;</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="class_application.html#a62f76cee9d16d4f8f0be4423c2559368">   31</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_application.html#a62f76cee9d16d4f8f0be4423c2559368">Finalize</a>() = 0;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="comment">// Sysytem</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordtype">void</span> InitializeSystem();</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordtype">void</span> UpdateSystem();</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordtype">void</span> FinalizeSystem();</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="class_application.html#a7d4610a35a20dc55e81e7c7cd04c9b89">   40</a></span>&#160;    <span class="keyword">class </span><a class="code" href="class_object_manager.html">ObjectManager</a>* <a class="code" href="class_application.html#a7d4610a35a20dc55e81e7c7cd04c9b89">objectManager</a>;</div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="class_application.html#a3186f6ee4d94bce35cd331d0aa12da33">   41</a></span>&#160;    <span class="keyword">class </span><a class="code" href="class_renderer.html">Renderer</a>* <a class="code" href="class_application.html#a3186f6ee4d94bce35cd331d0aa12da33">renderer</a>;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    HWND hWnd;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;};</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="ttc" id="aclass_application_html"><div class="ttname"><a href="class_application.html">Application</a></div><div class="ttdef"><b>Definition:</b> Application.h:13</div></div>
+<div class="ttc" id="aclass_application_html_a06ce223db894cb2d1bdb21998b64ae18"><div class="ttname"><a href="class_application.html#a06ce223db894cb2d1bdb21998b64ae18">Application::MsgProc</a></div><div class="ttdeci">static LRESULT CALLBACK MsgProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam)</div><div class="ttdoc">メッセージプロシージャ</div><div class="ttdef"><b>Definition:</b> Application.cpp:106</div></div>
+<div class="ttc" id="aclass_application_html_a3186f6ee4d94bce35cd331d0aa12da33"><div class="ttname"><a href="class_application.html#a3186f6ee4d94bce35cd331d0aa12da33">Application::renderer</a></div><div class="ttdeci">class Renderer * renderer</div><div class="ttdef"><b>Definition:</b> Application.h:41</div></div>
+<div class="ttc" id="aclass_application_html_a5fee66ae0ed8fce51bfb6427eee1c488"><div class="ttname"><a href="class_application.html#a5fee66ae0ed8fce51bfb6427eee1c488">Application::RegisterObject</a></div><div class="ttdeci">void RegisterObject(class Object *object)</div><div class="ttdoc">生成したオブジェクトを、マネージャーに登録する</div><div class="ttdef"><b>Definition:</b> Application.cpp:191</div></div>
+<div class="ttc" id="aclass_application_html_a62f76cee9d16d4f8f0be4423c2559368"><div class="ttname"><a href="class_application.html#a62f76cee9d16d4f8f0be4423c2559368">Application::Finalize</a></div><div class="ttdeci">virtual void Finalize()=0</div></div>
+<div class="ttc" id="aclass_application_html_a6b6a0f3dee7a353f28d3f3fec6a4cb89"><div class="ttname"><a href="class_application.html#a6b6a0f3dee7a353f28d3f3fec6a4cb89">Application::Update</a></div><div class="ttdeci">virtual void Update()=0</div></div>
+<div class="ttc" id="aclass_application_html_a71afeb0e0004041abdd9090204dc0da6"><div class="ttname"><a href="class_application.html#a71afeb0e0004041abdd9090204dc0da6">Application::InitWindow</a></div><div class="ttdeci">void InitWindow(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPWSTR lpCmdLine, int nCmdShow, const TCHAR *appName)</div><div class="ttdoc">ウィンドウの初期化</div><div class="ttdef"><b>Definition:</b> Application.cpp:124</div></div>
+<div class="ttc" id="aclass_application_html_a748bca84fefb9c12661cfaa2f623748d"><div class="ttname"><a href="class_application.html#a748bca84fefb9c12661cfaa2f623748d">Application::~Application</a></div><div class="ttdeci">~Application()</div><div class="ttdoc">デストラクタ</div><div class="ttdef"><b>Definition:</b> Application.cpp:28</div></div>
+<div class="ttc" id="aclass_application_html_a7d4610a35a20dc55e81e7c7cd04c9b89"><div class="ttname"><a href="class_application.html#a7d4610a35a20dc55e81e7c7cd04c9b89">Application::objectManager</a></div><div class="ttdeci">class ObjectManager * objectManager</div><div class="ttdef"><b>Definition:</b> Application.h:40</div></div>
+<div class="ttc" id="aclass_application_html_a8429472801f7fc084e388a4ac84fd753"><div class="ttname"><a href="class_application.html#a8429472801f7fc084e388a4ac84fd753">Application::Boot</a></div><div class="ttdeci">void Boot()</div><div class="ttdoc">初期化関数</div><div class="ttdef"><b>Definition:</b> Application.cpp:37</div></div>
+<div class="ttc" id="aclass_application_html_ad8f6f5be192bdf2d81cb5c852993a889"><div class="ttname"><a href="class_application.html#ad8f6f5be192bdf2d81cb5c852993a889">Application::DispatchWindowMessage</a></div><div class="ttdeci">bool DispatchWindowMessage()</div><div class="ttdoc">ウィンドウメッセージをディスパッチ</div><div class="ttdef"><b>Definition:</b> Application.cpp:168</div></div>
+<div class="ttc" id="aclass_application_html_aef53dc18b48d8ae5e7fc35a6c7ae5059"><div class="ttname"><a href="class_application.html#aef53dc18b48d8ae5e7fc35a6c7ae5059">Application::Initialize</a></div><div class="ttdeci">virtual void Initialize()=0</div></div>
+<div class="ttc" id="aclass_application_html_afa8cc05ce6b6092be5ecdfdae44e05f8"><div class="ttname"><a href="class_application.html#afa8cc05ce6b6092be5ecdfdae44e05f8">Application::Application</a></div><div class="ttdeci">Application()</div><div class="ttdoc">コンストラクタ</div><div class="ttdef"><b>Definition:</b> Application.cpp:17</div></div>
+<div class="ttc" id="aclass_object_html"><div class="ttname"><a href="class_object.html">Object</a></div><div class="ttdef"><b>Definition:</b> Object.h:13</div></div>
+<div class="ttc" id="aclass_object_manager_html"><div class="ttname"><a href="class_object_manager.html">ObjectManager</a></div><div class="ttdef"><b>Definition:</b> ObjectManager.h:14</div></div>
+<div class="ttc" id="aclass_renderer_html"><div class="ttname"><a href="class_renderer.html">Renderer</a></div><div class="ttdef"><b>Definition:</b> Renderer.h:20</div></div>
+<div class="ttc" id="astdafx_8h_html"><div class="ttname"><a href="stdafx_8h.html">stdafx.h</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

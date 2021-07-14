@@ -1,0 +1,231 @@
+\hypertarget{class_vector2}{}\doxysection{Vector2 クラス}
+\label{class_vector2}\index{Vector2@{Vector2}}
+
+
+{\ttfamily \#include $<$Math.\+h$>$}
+
+\doxysubsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_vector2_a22104d1809be26a419ef1f959e3761bf}{Vector2}} ()
+\item 
+\mbox{\hyperlink{class_vector2_a7268c7351418a0108edcc133342a151e}{Vector2}} (float inX, float inY)
+\item 
+void \mbox{\hyperlink{class_vector2_af5df4f74c8123e46309151f67dc055c4}{Set}} (float inX, float inY)
+\item 
+\mbox{\hyperlink{class_vector2}{Vector2}} \& \mbox{\hyperlink{class_vector2_a06efe324caeca58c2e4e71eb505f3fab}{operator$\ast$=}} (float scalar)
+\item 
+\mbox{\hyperlink{class_vector2}{Vector2}} \& \mbox{\hyperlink{class_vector2_a5928846f01965c75d2fed12d736ded72}{operator+=}} (const \mbox{\hyperlink{class_vector2}{Vector2}} \&right)
+\item 
+\mbox{\hyperlink{class_vector2}{Vector2}} \& \mbox{\hyperlink{class_vector2_a08c3e14ce14619fe30746baf13739e79}{operator-\/=}} (const \mbox{\hyperlink{class_vector2}{Vector2}} \&right)
+\item 
+float \mbox{\hyperlink{class_vector2_a124ed5576a8b5c92a124b536d2c2c8c9}{Length\+Sq}} () const
+\item 
+float \mbox{\hyperlink{class_vector2_acaef8b4a4aca3c292adeb99970d5c55f}{Length}} () const
+\item 
+void \mbox{\hyperlink{class_vector2_a3b597b3bfeb114dd9e157b86330e087d}{Normalize}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{静的公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_vector2}{Vector2}} \mbox{\hyperlink{class_vector2_a11283cd7a6295700663819a162212aa8}{Normlize}} (const \mbox{\hyperlink{class_vector2}{Vector2}} \&vec)
+\item 
+static float \mbox{\hyperlink{class_vector2_a0cb5c8e659076a24e60c37a11baca9dc}{Dot}} (const \mbox{\hyperlink{class_vector2}{Vector2}} \&a, const \mbox{\hyperlink{class_vector2}{Vector2}} \&b)
+\item 
+static \mbox{\hyperlink{class_vector2}{Vector2}} \mbox{\hyperlink{class_vector2_a5a38f4a8c421ddc6790f47aa04763742}{Lerp}} (const \mbox{\hyperlink{class_vector2}{Vector2}} \&a, const \mbox{\hyperlink{class_vector2}{Vector2}} \&b, float f)
+\item 
+static \mbox{\hyperlink{class_vector2}{Vector2}} \mbox{\hyperlink{class_vector2_a3446eb51a7a32a9718d7b730aa1cd5e4}{Reflect}} (const \mbox{\hyperlink{class_vector2}{Vector2}} \&v, const \mbox{\hyperlink{class_vector2}{Vector2}} \&n)
+\end{DoxyCompactItemize}
+\doxysubsection*{公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{class_vector2_a046bb8d17a876acc49415128dc0502f2}{x}}
+\item 
+float \mbox{\hyperlink{class_vector2_a0e07bad05f01ed811b909a2eef97f9e2}{y}}
+\end{DoxyCompactItemize}
+\doxysubsection*{静的公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+static const \mbox{\hyperlink{class_vector2}{Vector2}} \mbox{\hyperlink{class_vector2_ad6039b208cf18bbb89eace91dab27126}{Zero}}
+\item 
+static const \mbox{\hyperlink{class_vector2}{Vector2}} \mbox{\hyperlink{class_vector2_ab85e1a2c31429a8db803b6110185da61}{UnitX}}
+\item 
+static const \mbox{\hyperlink{class_vector2}{Vector2}} \mbox{\hyperlink{class_vector2_a1c7257442f38cc095fd5366b8181ab59}{UnitY}}
+\item 
+static const \mbox{\hyperlink{class_vector2}{Vector2}} \mbox{\hyperlink{class_vector2_a0d909a0092cfd35b7469fa3d97b24e89}{Neg\+UnitX}}
+\item 
+static const \mbox{\hyperlink{class_vector2}{Vector2}} \mbox{\hyperlink{class_vector2_afa2e695f7b919e5b5cf1ad0382d143b1}{Neg\+UnitY}}
+\end{DoxyCompactItemize}
+\doxysubsection*{フレンド}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_vector2}{Vector2}} \mbox{\hyperlink{class_vector2_a43adb85199fdc6ae1f9ba0397660ad9a}{operator+}} (const \mbox{\hyperlink{class_vector2}{Vector2}} \&a, const \mbox{\hyperlink{class_vector2}{Vector2}} \&b)
+\item 
+\mbox{\hyperlink{class_vector2}{Vector2}} \mbox{\hyperlink{class_vector2_a6132994fe4bbe4bd94b3bd1dbb83d5cf}{operator-\/}} (const \mbox{\hyperlink{class_vector2}{Vector2}} \&a, const \mbox{\hyperlink{class_vector2}{Vector2}} \&b)
+\item 
+\mbox{\hyperlink{class_vector2}{Vector2}} \mbox{\hyperlink{class_vector2_a5549297df20df692ca5454e039ed3ea2}{operator$\ast$}} (const \mbox{\hyperlink{class_vector2}{Vector2}} \&vec, float scalar)
+\item 
+\mbox{\hyperlink{class_vector2}{Vector2}} \mbox{\hyperlink{class_vector2_abbb021624ae2a6757e9a6336343060ea}{operator$\ast$}} (float scalar, const \mbox{\hyperlink{class_vector2}{Vector2}} \&vec)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{構築子と解体子}
+\mbox{\Hypertarget{class_vector2_a22104d1809be26a419ef1f959e3761bf}\label{class_vector2_a22104d1809be26a419ef1f959e3761bf}} 
+\index{Vector2@{Vector2}!Vector2@{Vector2}}
+\index{Vector2@{Vector2}!Vector2@{Vector2}}
+\doxysubsubsection{\texorpdfstring{Vector2()}{Vector2()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Vector2\+::\+Vector2 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_vector2_a7268c7351418a0108edcc133342a151e}\label{class_vector2_a7268c7351418a0108edcc133342a151e}} 
+\index{Vector2@{Vector2}!Vector2@{Vector2}}
+\index{Vector2@{Vector2}!Vector2@{Vector2}}
+\doxysubsubsection{\texorpdfstring{Vector2()}{Vector2()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Vector2\+::\+Vector2 (\begin{DoxyParamCaption}\item[{float}]{inX,  }\item[{float}]{inY }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+\doxysubsection{関数詳解}
+\mbox{\Hypertarget{class_vector2_a0cb5c8e659076a24e60c37a11baca9dc}\label{class_vector2_a0cb5c8e659076a24e60c37a11baca9dc}} 
+\index{Vector2@{Vector2}!Dot@{Dot}}
+\index{Dot@{Dot}!Vector2@{Vector2}}
+\doxysubsubsection{\texorpdfstring{Dot()}{Dot()}}
+{\footnotesize\ttfamily static float Vector2\+::\+Dot (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vector2}{Vector2}} \&}]{a,  }\item[{const \mbox{\hyperlink{class_vector2}{Vector2}} \&}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_vector2_acaef8b4a4aca3c292adeb99970d5c55f}\label{class_vector2_acaef8b4a4aca3c292adeb99970d5c55f}} 
+\index{Vector2@{Vector2}!Length@{Length}}
+\index{Length@{Length}!Vector2@{Vector2}}
+\doxysubsubsection{\texorpdfstring{Length()}{Length()}}
+{\footnotesize\ttfamily float Vector2\+::\+Length (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_vector2_a124ed5576a8b5c92a124b536d2c2c8c9}\label{class_vector2_a124ed5576a8b5c92a124b536d2c2c8c9}} 
+\index{Vector2@{Vector2}!LengthSq@{LengthSq}}
+\index{LengthSq@{LengthSq}!Vector2@{Vector2}}
+\doxysubsubsection{\texorpdfstring{LengthSq()}{LengthSq()}}
+{\footnotesize\ttfamily float Vector2\+::\+Length\+Sq (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_vector2_a5a38f4a8c421ddc6790f47aa04763742}\label{class_vector2_a5a38f4a8c421ddc6790f47aa04763742}} 
+\index{Vector2@{Vector2}!Lerp@{Lerp}}
+\index{Lerp@{Lerp}!Vector2@{Vector2}}
+\doxysubsubsection{\texorpdfstring{Lerp()}{Lerp()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{class_vector2}{Vector2}} Vector2\+::\+Lerp (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vector2}{Vector2}} \&}]{a,  }\item[{const \mbox{\hyperlink{class_vector2}{Vector2}} \&}]{b,  }\item[{float}]{f }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_vector2_a3b597b3bfeb114dd9e157b86330e087d}\label{class_vector2_a3b597b3bfeb114dd9e157b86330e087d}} 
+\index{Vector2@{Vector2}!Normalize@{Normalize}}
+\index{Normalize@{Normalize}!Vector2@{Vector2}}
+\doxysubsubsection{\texorpdfstring{Normalize()}{Normalize()}}
+{\footnotesize\ttfamily void Vector2\+::\+Normalize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_vector2_a11283cd7a6295700663819a162212aa8}\label{class_vector2_a11283cd7a6295700663819a162212aa8}} 
+\index{Vector2@{Vector2}!Normlize@{Normlize}}
+\index{Normlize@{Normlize}!Vector2@{Vector2}}
+\doxysubsubsection{\texorpdfstring{Normlize()}{Normlize()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{class_vector2}{Vector2}} Vector2\+::\+Normlize (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vector2}{Vector2}} \&}]{vec }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_vector2_a06efe324caeca58c2e4e71eb505f3fab}\label{class_vector2_a06efe324caeca58c2e4e71eb505f3fab}} 
+\index{Vector2@{Vector2}!operator$\ast$=@{operator$\ast$=}}
+\index{operator$\ast$=@{operator$\ast$=}!Vector2@{Vector2}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$=()}{operator*=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector2}{Vector2}}\& Vector2\+::operator$\ast$= (\begin{DoxyParamCaption}\item[{float}]{scalar }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_vector2_a5928846f01965c75d2fed12d736ded72}\label{class_vector2_a5928846f01965c75d2fed12d736ded72}} 
+\index{Vector2@{Vector2}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!Vector2@{Vector2}}
+\doxysubsubsection{\texorpdfstring{operator+=()}{operator+=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector2}{Vector2}}\& Vector2\+::operator+= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vector2}{Vector2}} \&}]{right }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_vector2_a08c3e14ce14619fe30746baf13739e79}\label{class_vector2_a08c3e14ce14619fe30746baf13739e79}} 
+\index{Vector2@{Vector2}!operator-\/=@{operator-\/=}}
+\index{operator-\/=@{operator-\/=}!Vector2@{Vector2}}
+\doxysubsubsection{\texorpdfstring{operator-\/=()}{operator-=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector2}{Vector2}}\& Vector2\+::operator-\/= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vector2}{Vector2}} \&}]{right }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_vector2_a3446eb51a7a32a9718d7b730aa1cd5e4}\label{class_vector2_a3446eb51a7a32a9718d7b730aa1cd5e4}} 
+\index{Vector2@{Vector2}!Reflect@{Reflect}}
+\index{Reflect@{Reflect}!Vector2@{Vector2}}
+\doxysubsubsection{\texorpdfstring{Reflect()}{Reflect()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{class_vector2}{Vector2}} Vector2\+::\+Reflect (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vector2}{Vector2}} \&}]{v,  }\item[{const \mbox{\hyperlink{class_vector2}{Vector2}} \&}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_vector2_af5df4f74c8123e46309151f67dc055c4}\label{class_vector2_af5df4f74c8123e46309151f67dc055c4}} 
+\index{Vector2@{Vector2}!Set@{Set}}
+\index{Set@{Set}!Vector2@{Vector2}}
+\doxysubsubsection{\texorpdfstring{Set()}{Set()}}
+{\footnotesize\ttfamily void Vector2\+::\+Set (\begin{DoxyParamCaption}\item[{float}]{inX,  }\item[{float}]{inY }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{フレンドと関連関数の詳解}
+\mbox{\Hypertarget{class_vector2_a5549297df20df692ca5454e039ed3ea2}\label{class_vector2_a5549297df20df692ca5454e039ed3ea2}} 
+\index{Vector2@{Vector2}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!Vector2@{Vector2}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$}{operator*}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector2}{Vector2}} operator$\ast$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vector2}{Vector2}} \&}]{vec,  }\item[{float}]{scalar }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{class_vector2_abbb021624ae2a6757e9a6336343060ea}\label{class_vector2_abbb021624ae2a6757e9a6336343060ea}} 
+\index{Vector2@{Vector2}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!Vector2@{Vector2}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$}{operator*}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector2}{Vector2}} operator$\ast$ (\begin{DoxyParamCaption}\item[{float}]{scalar,  }\item[{const \mbox{\hyperlink{class_vector2}{Vector2}} \&}]{vec }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{class_vector2_a43adb85199fdc6ae1f9ba0397660ad9a}\label{class_vector2_a43adb85199fdc6ae1f9ba0397660ad9a}} 
+\index{Vector2@{Vector2}!operator+@{operator+}}
+\index{operator+@{operator+}!Vector2@{Vector2}}
+\doxysubsubsection{\texorpdfstring{operator+}{operator+}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector2}{Vector2}} operator+ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vector2}{Vector2}} \&}]{a,  }\item[{const \mbox{\hyperlink{class_vector2}{Vector2}} \&}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{class_vector2_a6132994fe4bbe4bd94b3bd1dbb83d5cf}\label{class_vector2_a6132994fe4bbe4bd94b3bd1dbb83d5cf}} 
+\index{Vector2@{Vector2}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!Vector2@{Vector2}}
+\doxysubsubsection{\texorpdfstring{operator-\/}{operator-}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector2}{Vector2}} operator-\/ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vector2}{Vector2}} \&}]{a,  }\item[{const \mbox{\hyperlink{class_vector2}{Vector2}} \&}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\doxysubsection{メンバ詳解}
+\mbox{\Hypertarget{class_vector2_a0d909a0092cfd35b7469fa3d97b24e89}\label{class_vector2_a0d909a0092cfd35b7469fa3d97b24e89}} 
+\index{Vector2@{Vector2}!NegUnitX@{NegUnitX}}
+\index{NegUnitX@{NegUnitX}!Vector2@{Vector2}}
+\doxysubsubsection{\texorpdfstring{NegUnitX}{NegUnitX}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{class_vector2}{Vector2}} Vector2\+::\+Neg\+UnitX\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_vector2_afa2e695f7b919e5b5cf1ad0382d143b1}\label{class_vector2_afa2e695f7b919e5b5cf1ad0382d143b1}} 
+\index{Vector2@{Vector2}!NegUnitY@{NegUnitY}}
+\index{NegUnitY@{NegUnitY}!Vector2@{Vector2}}
+\doxysubsubsection{\texorpdfstring{NegUnitY}{NegUnitY}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{class_vector2}{Vector2}} Vector2\+::\+Neg\+UnitY\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_vector2_ab85e1a2c31429a8db803b6110185da61}\label{class_vector2_ab85e1a2c31429a8db803b6110185da61}} 
+\index{Vector2@{Vector2}!UnitX@{UnitX}}
+\index{UnitX@{UnitX}!Vector2@{Vector2}}
+\doxysubsubsection{\texorpdfstring{UnitX}{UnitX}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{class_vector2}{Vector2}} Vector2\+::\+UnitX\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_vector2_a1c7257442f38cc095fd5366b8181ab59}\label{class_vector2_a1c7257442f38cc095fd5366b8181ab59}} 
+\index{Vector2@{Vector2}!UnitY@{UnitY}}
+\index{UnitY@{UnitY}!Vector2@{Vector2}}
+\doxysubsubsection{\texorpdfstring{UnitY}{UnitY}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{class_vector2}{Vector2}} Vector2\+::\+UnitY\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_vector2_a046bb8d17a876acc49415128dc0502f2}\label{class_vector2_a046bb8d17a876acc49415128dc0502f2}} 
+\index{Vector2@{Vector2}!x@{x}}
+\index{x@{x}!Vector2@{Vector2}}
+\doxysubsubsection{\texorpdfstring{x}{x}}
+{\footnotesize\ttfamily float Vector2\+::x}
+
+\mbox{\Hypertarget{class_vector2_a0e07bad05f01ed811b909a2eef97f9e2}\label{class_vector2_a0e07bad05f01ed811b909a2eef97f9e2}} 
+\index{Vector2@{Vector2}!y@{y}}
+\index{y@{y}!Vector2@{Vector2}}
+\doxysubsubsection{\texorpdfstring{y}{y}}
+{\footnotesize\ttfamily float Vector2\+::y}
+
+\mbox{\Hypertarget{class_vector2_ad6039b208cf18bbb89eace91dab27126}\label{class_vector2_ad6039b208cf18bbb89eace91dab27126}} 
+\index{Vector2@{Vector2}!Zero@{Zero}}
+\index{Zero@{Zero}!Vector2@{Vector2}}
+\doxysubsubsection{\texorpdfstring{Zero}{Zero}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{class_vector2}{Vector2}} Vector2\+::\+Zero\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+DXEngine2\+D/\mbox{\hyperlink{_math_8h}{Math.\+h}}\item 
+DXEngine2\+D/\mbox{\hyperlink{_math_8cpp}{Math.\+cpp}}\end{DoxyCompactItemize}

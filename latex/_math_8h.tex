@@ -1,0 +1,75 @@
+\hypertarget{_math_8h}{}\doxysection{DXEngine2\+D/\+Math.h ファイル}
+\label{_math_8h}\index{DXEngine2D/Math.h@{DXEngine2D/Math.h}}
+
+
+数学ライブラリ  
+
+
+{\ttfamily \#include $<$cmath$>$}\newline
+{\ttfamily \#include $<$memory.\+h$>$}\newline
+{\ttfamily \#include $<$limits$>$}\newline
+\doxysubsection*{クラス}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_vector2}{Vector2}}
+\end{DoxyCompactItemize}
+\doxysubsection*{名前空間}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespace_math}{Math}}
+\end{DoxyCompactItemize}
+\doxysubsection*{関数}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{namespace_math_a3cb686c95bbcce3f8a96a9214263aaaa}{Math\+::\+To\+Radians}} (float degrees)
+\item 
+float \mbox{\hyperlink{namespace_math_a0d041d1f5cd6c4ee20734f24f6abf1f0}{Math\+::\+To\+Degrees}} (float radians)
+\item 
+bool \mbox{\hyperlink{namespace_math_a5359e1af9f3fe98ab3c8b184b2b19308}{Math\+::\+Near\+Zero}} (float val, float epsilon=0.\+001f)
+\item 
+{\footnotesize template$<$typename T $>$ }\\T \mbox{\hyperlink{namespace_math_af8f40a36d58f6b3e327438b1463cc3b4}{Math\+::\+Max}} (const T \&a, const T \&b)
+\item 
+{\footnotesize template$<$typename T $>$ }\\T \mbox{\hyperlink{namespace_math_aec7764d447f7491c4d3b02da52ea1ea9}{Math\+::\+Min}} (const T \&a, const T \&b)
+\item 
+{\footnotesize template$<$typename T $>$ }\\T \mbox{\hyperlink{namespace_math_ae348b8156aa833e26c8446c6ab457bd9}{Math\+::\+Clamp}} (const T \&value, const T \&lower, const T \&upper)
+\item 
+float \mbox{\hyperlink{namespace_math_a4048e2be9d74afc86689bd27217f0a17}{Math\+::\+Abs}} (float value)
+\item 
+float \mbox{\hyperlink{namespace_math_aa074fcf7b6939cf932df3a027947ae37}{Math\+::\+Cos}} (float angle)
+\item 
+float \mbox{\hyperlink{namespace_math_ae1b5c5b012bf0a3485bd21bd28bb36ac}{Math\+::\+Sin}} (float angle)
+\item 
+float \mbox{\hyperlink{namespace_math_a52a61bb1378447dbbc1e09196e0f74c3}{Math\+::\+Tan}} (float angle)
+\item 
+float \mbox{\hyperlink{namespace_math_ae09c80e87ad2d99aa6e395dd4a80bca3}{Math\+::\+Acos}} (float value)
+\item 
+float \mbox{\hyperlink{namespace_math_ad63074984c8a10410366b17eeb428e27}{Math\+::\+Atan2}} (float y, float x)
+\item 
+float \mbox{\hyperlink{namespace_math_afddb55583d9acfd5110f95d44929257e}{Math\+::\+Cot}} (float angle)
+\item 
+float \mbox{\hyperlink{namespace_math_a3a01ad3e3faa4943b5872ff46162d9a9}{Math\+::\+Lerp}} (float a, float b, float f)
+\item 
+float \mbox{\hyperlink{namespace_math_aa1686f3cdacf185fd09a4a9d41427936}{Math\+::\+Sqrt}} (float value)
+\item 
+float \mbox{\hyperlink{namespace_math_a2be599e707eb198f17063c557c756866}{Math\+::\+Fmod}} (float numer, float denom)
+\end{DoxyCompactItemize}
+\doxysubsection*{変数}
+\begin{DoxyCompactItemize}
+\item 
+const float \mbox{\hyperlink{namespace_math_abc2f17b5e6cb4da17f718364aedafa8e}{Math\+::\+Pi}} = 3.\+1415926535f
+\item 
+const float \mbox{\hyperlink{namespace_math_a117c19ae2016c83f0ebf13333f629397}{Math\+::\+Infinity}} = std\+::numeric\+\_\+limits$<$float$>$\+::infinity()
+\item 
+const float \mbox{\hyperlink{namespace_math_aea217efd42cdbf1a07a45d128e87b245}{Math\+::\+Neg\+Infinity}} = -\/std\+::numeric\+\_\+limits$<$float$>$\+::infinity()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{詳解}
+数学ライブラリ 
+
+\begin{DoxyAuthor}{著者}
+tatsuki kanno 
+\end{DoxyAuthor}
+\begin{DoxyDate}{日付}
+2021/07/03 
+\end{DoxyDate}

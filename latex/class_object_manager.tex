@@ -1,0 +1,94 @@
+\hypertarget{class_object_manager}{}\doxysection{Object\+Manager クラス}
+\label{class_object_manager}\index{ObjectManager@{ObjectManager}}
+
+
+{\ttfamily \#include $<$Object\+Manager.\+h$>$}
+
+\doxysubsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_object_manager_a6fa9372c7c3a8da88412f4158ca3dfd9}{Object\+Manager}} ()
+\begin{DoxyCompactList}\small\item\em コンストラクタ \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_object_manager_a25b057e6d1e60c9cbeb29d41923d8c2c}{$\sim$\+Object\+Manager}} ()
+\begin{DoxyCompactList}\small\item\em デストラクタ \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_object_manager_a4afd6b3b9b6336e7dd4f76a9461b735f}{Initialize}} ()
+\begin{DoxyCompactList}\small\item\em 初期化関数 \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_object_manager_ac6035906749a40ec3a1d685ebed11c89}{Update}} ()
+\begin{DoxyCompactList}\small\item\em 更新関数 \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_object_manager_a9cd600a686194ab707d62ba957931c79}{Finalize}} ()
+\begin{DoxyCompactList}\small\item\em 終了処理関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_object_manager_a14e6b730894902ad49b9b764504c7626}{Register}} (\mbox{\hyperlink{class_object}{Object}} $\ast$object)
+\begin{DoxyCompactList}\small\item\em オブジェクトを登録する \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{構築子と解体子}
+\mbox{\Hypertarget{class_object_manager_a6fa9372c7c3a8da88412f4158ca3dfd9}\label{class_object_manager_a6fa9372c7c3a8da88412f4158ca3dfd9}} 
+\index{ObjectManager@{ObjectManager}!ObjectManager@{ObjectManager}}
+\index{ObjectManager@{ObjectManager}!ObjectManager@{ObjectManager}}
+\doxysubsubsection{\texorpdfstring{ObjectManager()}{ObjectManager()}}
+{\footnotesize\ttfamily Object\+Manager\+::\+Object\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+コンストラクタ 
+
+\mbox{\Hypertarget{class_object_manager_a25b057e6d1e60c9cbeb29d41923d8c2c}\label{class_object_manager_a25b057e6d1e60c9cbeb29d41923d8c2c}} 
+\index{ObjectManager@{ObjectManager}!````~ObjectManager@{$\sim$ObjectManager}}
+\index{````~ObjectManager@{$\sim$ObjectManager}!ObjectManager@{ObjectManager}}
+\doxysubsubsection{\texorpdfstring{$\sim$ObjectManager()}{~ObjectManager()}}
+{\footnotesize\ttfamily Object\+Manager\+::$\sim$\+Object\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+デストラクタ 
+
+
+
+\doxysubsection{関数詳解}
+\mbox{\Hypertarget{class_object_manager_a9cd600a686194ab707d62ba957931c79}\label{class_object_manager_a9cd600a686194ab707d62ba957931c79}} 
+\index{ObjectManager@{ObjectManager}!Finalize@{Finalize}}
+\index{Finalize@{Finalize}!ObjectManager@{ObjectManager}}
+\doxysubsubsection{\texorpdfstring{Finalize()}{Finalize()}}
+{\footnotesize\ttfamily void Object\+Manager\+::\+Finalize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+終了処理関数 
+
+終了時の終了処理 \mbox{\Hypertarget{class_object_manager_a4afd6b3b9b6336e7dd4f76a9461b735f}\label{class_object_manager_a4afd6b3b9b6336e7dd4f76a9461b735f}} 
+\index{ObjectManager@{ObjectManager}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!ObjectManager@{ObjectManager}}
+\doxysubsubsection{\texorpdfstring{Initialize()}{Initialize()}}
+{\footnotesize\ttfamily void Object\+Manager\+::\+Initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+初期化関数 
+
+初期化処理 \mbox{\Hypertarget{class_object_manager_a14e6b730894902ad49b9b764504c7626}\label{class_object_manager_a14e6b730894902ad49b9b764504c7626}} 
+\index{ObjectManager@{ObjectManager}!Register@{Register}}
+\index{Register@{Register}!ObjectManager@{ObjectManager}}
+\doxysubsubsection{\texorpdfstring{Register()}{Register()}}
+{\footnotesize\ttfamily void Object\+Manager\+::\+Register (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_object}{Object}} $\ast$}]{object }\end{DoxyParamCaption})}
+
+
+
+オブジェクトを登録する 
+
+~\newline
+ \mbox{\Hypertarget{class_object_manager_ac6035906749a40ec3a1d685ebed11c89}\label{class_object_manager_ac6035906749a40ec3a1d685ebed11c89}} 
+\index{ObjectManager@{ObjectManager}!Update@{Update}}
+\index{Update@{Update}!ObjectManager@{ObjectManager}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Object\+Manager\+::\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+更新関数 
+
+更新処理 
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+DXEngine2\+D/\mbox{\hyperlink{_object_manager_8h}{Object\+Manager.\+h}}\item 
+DXEngine2\+D/\mbox{\hyperlink{_object_manager_8cpp}{Object\+Manager.\+cpp}}\end{DoxyCompactItemize}

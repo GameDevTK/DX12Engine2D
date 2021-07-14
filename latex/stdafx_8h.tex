@@ -1,0 +1,91 @@
+\hypertarget{stdafx_8h}{}\doxysection{DXEngine2\+D/stdafx.h ファイル}
+\label{stdafx_8h}\index{DXEngine2D/stdafx.h@{DXEngine2D/stdafx.h}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$memory$>$}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$list$>$}\newline
+{\ttfamily \#include $<$D3\+DCompiler.\+h$>$}\newline
+{\ttfamily \#include $<$Windows.\+h$>$}\newline
+{\ttfamily \#include $<$d3d12.\+h$>$}\newline
+{\ttfamily \#include $<$map$>$}\newline
+{\ttfamily \#include $<$functional$>$}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include $<$Direct\+XMath.\+h$>$}\newline
+{\ttfamily \#include $<$Xinput.\+h$>$}\newline
+{\ttfamily \#include $<$array$>$}\newline
+\doxysubsection*{関数}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class T $>$ }\\void \mbox{\hyperlink{stdafx_8h_ae0974579816c02b28e14762ccdc6ecfe}{Safe\+Delete}} (T $\ast$\&p)
+\begin{DoxyCompactList}\small\item\em 安全なdeleteをするテンプレート関数 \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\void \mbox{\hyperlink{stdafx_8h_a84b9df922f149c8465e5b82097d2eada}{Safe\+Release}} (T $\ast$\&p)
+\begin{DoxyCompactList}\small\item\em 安全なreleaseをするテンプレート関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{変数}
+\begin{DoxyCompactItemize}
+\item 
+const UINT \mbox{\hyperlink{stdafx_8h_a8c3fe664085aebcc2a9d780d83c538ef}{FRAME\+\_\+\+BUFFER\+\_\+W}} = 1280
+\item 
+const UINT \mbox{\hyperlink{stdafx_8h_acc8de25fa8acea322654630a49309d08}{FRAME\+\_\+\+BUFFER\+\_\+H}} = 720
+\begin{DoxyCompactList}\small\item\em フレームバッファの幅 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{関数詳解}
+\mbox{\Hypertarget{stdafx_8h_ae0974579816c02b28e14762ccdc6ecfe}\label{stdafx_8h_ae0974579816c02b28e14762ccdc6ecfe}} 
+\index{stdafx.h@{stdafx.h}!SafeDelete@{SafeDelete}}
+\index{SafeDelete@{SafeDelete}!stdafx.h@{stdafx.h}}
+\doxysubsubsection{\texorpdfstring{SafeDelete()}{SafeDelete()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void Safe\+Delete (\begin{DoxyParamCaption}\item[{T $\ast$\&}]{p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+安全なdeleteをするテンプレート関数 
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{ in}}  & {\em p} & deleteしたいオブジェクトポインタ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+void
+\end{DoxyReturn}
+delete処理後、nullptrで初期化 \mbox{\Hypertarget{stdafx_8h_a84b9df922f149c8465e5b82097d2eada}\label{stdafx_8h_a84b9df922f149c8465e5b82097d2eada}} 
+\index{stdafx.h@{stdafx.h}!SafeRelease@{SafeRelease}}
+\index{SafeRelease@{SafeRelease}!stdafx.h@{stdafx.h}}
+\doxysubsubsection{\texorpdfstring{SafeRelease()}{SafeRelease()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void Safe\+Release (\begin{DoxyParamCaption}\item[{T $\ast$\&}]{p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+安全なreleaseをするテンプレート関数 
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{ in}}  & {\em p} & releaseしたいオブジェクトポインタ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+void
+\end{DoxyReturn}
+delete処理後、nullptrで初期化 
+
+\doxysubsection{変数詳解}
+\mbox{\Hypertarget{stdafx_8h_acc8de25fa8acea322654630a49309d08}\label{stdafx_8h_acc8de25fa8acea322654630a49309d08}} 
+\index{stdafx.h@{stdafx.h}!FRAME\_BUFFER\_H@{FRAME\_BUFFER\_H}}
+\index{FRAME\_BUFFER\_H@{FRAME\_BUFFER\_H}!stdafx.h@{stdafx.h}}
+\doxysubsubsection{\texorpdfstring{FRAME\_BUFFER\_H}{FRAME\_BUFFER\_H}}
+{\footnotesize\ttfamily const UINT FRAME\+\_\+\+BUFFER\+\_\+H = 720}
+
+
+
+フレームバッファの幅 
+
+\mbox{\Hypertarget{stdafx_8h_a8c3fe664085aebcc2a9d780d83c538ef}\label{stdafx_8h_a8c3fe664085aebcc2a9d780d83c538ef}} 
+\index{stdafx.h@{stdafx.h}!FRAME\_BUFFER\_W@{FRAME\_BUFFER\_W}}
+\index{FRAME\_BUFFER\_W@{FRAME\_BUFFER\_W}!stdafx.h@{stdafx.h}}
+\doxysubsubsection{\texorpdfstring{FRAME\_BUFFER\_W}{FRAME\_BUFFER\_W}}
+{\footnotesize\ttfamily const UINT FRAME\+\_\+\+BUFFER\+\_\+W = 1280}
+

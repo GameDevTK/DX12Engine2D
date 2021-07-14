@@ -1,0 +1,171 @@
+\hypertarget{class_renderer}{}\doxysection{Renderer クラス}
+\label{class_renderer}\index{Renderer@{Renderer}}
+
+
+{\ttfamily \#include $<$Renderer.\+h$>$}
+
+\doxysubsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_renderer_a7ebf46f54dab9905f79b80f7fddb76a6}{Renderer}} ()
+\begin{DoxyCompactList}\small\item\em コンストラクタ \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_renderer_afeee408862d5bd6255a6882d47e6d5cd}{$\sim$\+Renderer}} ()
+\begin{DoxyCompactList}\small\item\em デストラクタ \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_renderer_a24e60dfccf32b9cfa5de30f977fb59d1}{Initialize}} ()
+\begin{DoxyCompactList}\small\item\em 初期化関数 \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_renderer_a7cbd30dabcc6cd3b977ae647f6d3f23c}{Update}} ()
+\begin{DoxyCompactList}\small\item\em 更新関数 \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_renderer_a24b6743f6cb333e61b5409e71eb55528}{Finalize}} ()
+\begin{DoxyCompactList}\small\item\em 終了処理関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_renderer_a9619f50269a0f79fe1b6aa431dbeb363}{Register}} (class \mbox{\hyperlink{class_render_component}{Render\+Component}} $\ast$object)
+\begin{DoxyCompactList}\small\item\em オブジェクトを登録する \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_renderer_a6851911a1220c6f62742aa8e1a4678ba}{Unregister}} (class \mbox{\hyperlink{class_render_component}{Render\+Component}} $\ast$object)
+\begin{DoxyCompactList}\small\item\em オブジェクトを解除する \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_renderer_a0c124d211ea804d7cac145b59e290dbe}{Begin\+Render}} ()
+\item 
+void \mbox{\hyperlink{class_renderer_a9caa68ec12f49c0ac7b1d90ea57887f6}{End\+Render}} ()
+\item 
+ID3\+D12\+Device5 $\ast$ \mbox{\hyperlink{class_renderer_abc39b51c75a8290ff65557aac7e63095}{Get\+D3\+DDevice}} ()
+\item 
+UINT \mbox{\hyperlink{class_renderer_ae08dd5089b51e82e1d1133103e0ae30c}{Get\+Back\+Buffer\+Index}} () const
+\item 
+ID3\+D12\+Command\+Queue $\ast$ \mbox{\hyperlink{class_renderer_acf245ab0d105cb7ad18b902323ef207d}{Get\+Command\+Queue}} () const
+\item 
+ID3\+D12\+Graphics\+Command\+List4 $\ast$ \mbox{\hyperlink{class_renderer_a3ead191b35ce165aafc35ea97c28c1ea}{Get\+Command\+List}} () const
+\item 
+UINT \mbox{\hyperlink{class_renderer_a2cbfe2e832a380a7db51d9194868890d}{Get\+Cbr\+Srv\+Descriptor\+Size}} () const
+\item 
+UINT \mbox{\hyperlink{class_renderer_aa7aedf2d8a4276c2134a109141d215b7}{Get\+Sampler\+Descriptor\+Sizze}} () const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{構築子と解体子}
+\mbox{\Hypertarget{class_renderer_a7ebf46f54dab9905f79b80f7fddb76a6}\label{class_renderer_a7ebf46f54dab9905f79b80f7fddb76a6}} 
+\index{Renderer@{Renderer}!Renderer@{Renderer}}
+\index{Renderer@{Renderer}!Renderer@{Renderer}}
+\doxysubsubsection{\texorpdfstring{Renderer()}{Renderer()}}
+{\footnotesize\ttfamily Renderer\+::\+Renderer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+コンストラクタ 
+
+\mbox{\Hypertarget{class_renderer_afeee408862d5bd6255a6882d47e6d5cd}\label{class_renderer_afeee408862d5bd6255a6882d47e6d5cd}} 
+\index{Renderer@{Renderer}!````~Renderer@{$\sim$Renderer}}
+\index{````~Renderer@{$\sim$Renderer}!Renderer@{Renderer}}
+\doxysubsubsection{\texorpdfstring{$\sim$Renderer()}{~Renderer()}}
+{\footnotesize\ttfamily Renderer\+::$\sim$\+Renderer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+デストラクタ 
+
+
+
+\doxysubsection{関数詳解}
+\mbox{\Hypertarget{class_renderer_a0c124d211ea804d7cac145b59e290dbe}\label{class_renderer_a0c124d211ea804d7cac145b59e290dbe}} 
+\index{Renderer@{Renderer}!BeginRender@{BeginRender}}
+\index{BeginRender@{BeginRender}!Renderer@{Renderer}}
+\doxysubsubsection{\texorpdfstring{BeginRender()}{BeginRender()}}
+{\footnotesize\ttfamily void Renderer\+::\+Begin\+Render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_renderer_a9caa68ec12f49c0ac7b1d90ea57887f6}\label{class_renderer_a9caa68ec12f49c0ac7b1d90ea57887f6}} 
+\index{Renderer@{Renderer}!EndRender@{EndRender}}
+\index{EndRender@{EndRender}!Renderer@{Renderer}}
+\doxysubsubsection{\texorpdfstring{EndRender()}{EndRender()}}
+{\footnotesize\ttfamily void Renderer\+::\+End\+Render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_renderer_a24b6743f6cb333e61b5409e71eb55528}\label{class_renderer_a24b6743f6cb333e61b5409e71eb55528}} 
+\index{Renderer@{Renderer}!Finalize@{Finalize}}
+\index{Finalize@{Finalize}!Renderer@{Renderer}}
+\doxysubsubsection{\texorpdfstring{Finalize()}{Finalize()}}
+{\footnotesize\ttfamily void Renderer\+::\+Finalize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+終了処理関数 
+
+終了時の終了処理 \mbox{\Hypertarget{class_renderer_ae08dd5089b51e82e1d1133103e0ae30c}\label{class_renderer_ae08dd5089b51e82e1d1133103e0ae30c}} 
+\index{Renderer@{Renderer}!GetBackBufferIndex@{GetBackBufferIndex}}
+\index{GetBackBufferIndex@{GetBackBufferIndex}!Renderer@{Renderer}}
+\doxysubsubsection{\texorpdfstring{GetBackBufferIndex()}{GetBackBufferIndex()}}
+{\footnotesize\ttfamily UINT Renderer\+::\+Get\+Back\+Buffer\+Index (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_renderer_a2cbfe2e832a380a7db51d9194868890d}\label{class_renderer_a2cbfe2e832a380a7db51d9194868890d}} 
+\index{Renderer@{Renderer}!GetCbrSrvDescriptorSize@{GetCbrSrvDescriptorSize}}
+\index{GetCbrSrvDescriptorSize@{GetCbrSrvDescriptorSize}!Renderer@{Renderer}}
+\doxysubsubsection{\texorpdfstring{GetCbrSrvDescriptorSize()}{GetCbrSrvDescriptorSize()}}
+{\footnotesize\ttfamily UINT Renderer\+::\+Get\+Cbr\+Srv\+Descriptor\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_renderer_a3ead191b35ce165aafc35ea97c28c1ea}\label{class_renderer_a3ead191b35ce165aafc35ea97c28c1ea}} 
+\index{Renderer@{Renderer}!GetCommandList@{GetCommandList}}
+\index{GetCommandList@{GetCommandList}!Renderer@{Renderer}}
+\doxysubsubsection{\texorpdfstring{GetCommandList()}{GetCommandList()}}
+{\footnotesize\ttfamily ID3\+D12\+Graphics\+Command\+List4$\ast$ Renderer\+::\+Get\+Command\+List (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_renderer_acf245ab0d105cb7ad18b902323ef207d}\label{class_renderer_acf245ab0d105cb7ad18b902323ef207d}} 
+\index{Renderer@{Renderer}!GetCommandQueue@{GetCommandQueue}}
+\index{GetCommandQueue@{GetCommandQueue}!Renderer@{Renderer}}
+\doxysubsubsection{\texorpdfstring{GetCommandQueue()}{GetCommandQueue()}}
+{\footnotesize\ttfamily ID3\+D12\+Command\+Queue$\ast$ Renderer\+::\+Get\+Command\+Queue (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_renderer_abc39b51c75a8290ff65557aac7e63095}\label{class_renderer_abc39b51c75a8290ff65557aac7e63095}} 
+\index{Renderer@{Renderer}!GetD3DDevice@{GetD3DDevice}}
+\index{GetD3DDevice@{GetD3DDevice}!Renderer@{Renderer}}
+\doxysubsubsection{\texorpdfstring{GetD3DDevice()}{GetD3DDevice()}}
+{\footnotesize\ttfamily ID3\+D12\+Device5$\ast$ Renderer\+::\+Get\+D3\+DDevice (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_renderer_aa7aedf2d8a4276c2134a109141d215b7}\label{class_renderer_aa7aedf2d8a4276c2134a109141d215b7}} 
+\index{Renderer@{Renderer}!GetSamplerDescriptorSizze@{GetSamplerDescriptorSizze}}
+\index{GetSamplerDescriptorSizze@{GetSamplerDescriptorSizze}!Renderer@{Renderer}}
+\doxysubsubsection{\texorpdfstring{GetSamplerDescriptorSizze()}{GetSamplerDescriptorSizze()}}
+{\footnotesize\ttfamily UINT Renderer\+::\+Get\+Sampler\+Descriptor\+Sizze (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_renderer_a24e60dfccf32b9cfa5de30f977fb59d1}\label{class_renderer_a24e60dfccf32b9cfa5de30f977fb59d1}} 
+\index{Renderer@{Renderer}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!Renderer@{Renderer}}
+\doxysubsubsection{\texorpdfstring{Initialize()}{Initialize()}}
+{\footnotesize\ttfamily void Renderer\+::\+Initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+初期化関数 
+
+初期化処理 \mbox{\Hypertarget{class_renderer_a9619f50269a0f79fe1b6aa431dbeb363}\label{class_renderer_a9619f50269a0f79fe1b6aa431dbeb363}} 
+\index{Renderer@{Renderer}!Register@{Register}}
+\index{Register@{Register}!Renderer@{Renderer}}
+\doxysubsubsection{\texorpdfstring{Register()}{Register()}}
+{\footnotesize\ttfamily void Renderer\+::\+Register (\begin{DoxyParamCaption}\item[{class \mbox{\hyperlink{class_render_component}{Render\+Component}} $\ast$}]{object }\end{DoxyParamCaption})}
+
+
+
+オブジェクトを登録する 
+
+~\newline
+ \mbox{\Hypertarget{class_renderer_a6851911a1220c6f62742aa8e1a4678ba}\label{class_renderer_a6851911a1220c6f62742aa8e1a4678ba}} 
+\index{Renderer@{Renderer}!Unregister@{Unregister}}
+\index{Unregister@{Unregister}!Renderer@{Renderer}}
+\doxysubsubsection{\texorpdfstring{Unregister()}{Unregister()}}
+{\footnotesize\ttfamily void Renderer\+::\+Unregister (\begin{DoxyParamCaption}\item[{class \mbox{\hyperlink{class_render_component}{Render\+Component}} $\ast$}]{object }\end{DoxyParamCaption})}
+
+
+
+オブジェクトを解除する 
+
+~\newline
+ \mbox{\Hypertarget{class_renderer_a7cbd30dabcc6cd3b977ae647f6d3f23c}\label{class_renderer_a7cbd30dabcc6cd3b977ae647f6d3f23c}} 
+\index{Renderer@{Renderer}!Update@{Update}}
+\index{Update@{Update}!Renderer@{Renderer}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Renderer\+::\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+更新関数 
+
+更新処理 
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+DXEngine2\+D/\mbox{\hyperlink{_renderer_8h}{Renderer.\+h}}\item 
+DXEngine2\+D/\mbox{\hyperlink{_renderer_8cpp}{Renderer.\+cpp}}\end{DoxyCompactItemize}

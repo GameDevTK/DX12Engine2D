@@ -1,0 +1,169 @@
+\hypertarget{namespace_math}{}\doxysection{Math 名前空間}
+\label{namespace_math}\index{Math@{Math}}
+\doxysubsection*{関数}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{namespace_math_a3cb686c95bbcce3f8a96a9214263aaaa}{To\+Radians}} (float degrees)
+\item 
+float \mbox{\hyperlink{namespace_math_a0d041d1f5cd6c4ee20734f24f6abf1f0}{To\+Degrees}} (float radians)
+\item 
+bool \mbox{\hyperlink{namespace_math_a5359e1af9f3fe98ab3c8b184b2b19308}{Near\+Zero}} (float val, float epsilon=0.\+001f)
+\item 
+{\footnotesize template$<$typename T $>$ }\\T \mbox{\hyperlink{namespace_math_af8f40a36d58f6b3e327438b1463cc3b4}{Max}} (const T \&a, const T \&b)
+\item 
+{\footnotesize template$<$typename T $>$ }\\T \mbox{\hyperlink{namespace_math_aec7764d447f7491c4d3b02da52ea1ea9}{Min}} (const T \&a, const T \&b)
+\item 
+{\footnotesize template$<$typename T $>$ }\\T \mbox{\hyperlink{namespace_math_ae348b8156aa833e26c8446c6ab457bd9}{Clamp}} (const T \&value, const T \&lower, const T \&upper)
+\item 
+float \mbox{\hyperlink{namespace_math_a4048e2be9d74afc86689bd27217f0a17}{Abs}} (float value)
+\item 
+float \mbox{\hyperlink{namespace_math_aa074fcf7b6939cf932df3a027947ae37}{Cos}} (float angle)
+\item 
+float \mbox{\hyperlink{namespace_math_ae1b5c5b012bf0a3485bd21bd28bb36ac}{Sin}} (float angle)
+\item 
+float \mbox{\hyperlink{namespace_math_a52a61bb1378447dbbc1e09196e0f74c3}{Tan}} (float angle)
+\item 
+float \mbox{\hyperlink{namespace_math_ae09c80e87ad2d99aa6e395dd4a80bca3}{Acos}} (float value)
+\item 
+float \mbox{\hyperlink{namespace_math_ad63074984c8a10410366b17eeb428e27}{Atan2}} (float y, float x)
+\item 
+float \mbox{\hyperlink{namespace_math_afddb55583d9acfd5110f95d44929257e}{Cot}} (float angle)
+\item 
+float \mbox{\hyperlink{namespace_math_a3a01ad3e3faa4943b5872ff46162d9a9}{Lerp}} (float a, float b, float f)
+\item 
+float \mbox{\hyperlink{namespace_math_aa1686f3cdacf185fd09a4a9d41427936}{Sqrt}} (float value)
+\item 
+float \mbox{\hyperlink{namespace_math_a2be599e707eb198f17063c557c756866}{Fmod}} (float numer, float denom)
+\end{DoxyCompactItemize}
+\doxysubsection*{変数}
+\begin{DoxyCompactItemize}
+\item 
+const float \mbox{\hyperlink{namespace_math_abc2f17b5e6cb4da17f718364aedafa8e}{Pi}} = 3.\+1415926535f
+\item 
+const float \mbox{\hyperlink{namespace_math_a117c19ae2016c83f0ebf13333f629397}{Infinity}} = std\+::numeric\+\_\+limits$<$float$>$\+::infinity()
+\item 
+const float \mbox{\hyperlink{namespace_math_aea217efd42cdbf1a07a45d128e87b245}{Neg\+Infinity}} = -\/std\+::numeric\+\_\+limits$<$float$>$\+::infinity()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{関数詳解}
+\mbox{\Hypertarget{namespace_math_a4048e2be9d74afc86689bd27217f0a17}\label{namespace_math_a4048e2be9d74afc86689bd27217f0a17}} 
+\index{Math@{Math}!Abs@{Abs}}
+\index{Abs@{Abs}!Math@{Math}}
+\doxysubsubsection{\texorpdfstring{Abs()}{Abs()}}
+{\footnotesize\ttfamily float Math\+::\+Abs (\begin{DoxyParamCaption}\item[{float}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{namespace_math_ae09c80e87ad2d99aa6e395dd4a80bca3}\label{namespace_math_ae09c80e87ad2d99aa6e395dd4a80bca3}} 
+\index{Math@{Math}!Acos@{Acos}}
+\index{Acos@{Acos}!Math@{Math}}
+\doxysubsubsection{\texorpdfstring{Acos()}{Acos()}}
+{\footnotesize\ttfamily float Math\+::\+Acos (\begin{DoxyParamCaption}\item[{float}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{namespace_math_ad63074984c8a10410366b17eeb428e27}\label{namespace_math_ad63074984c8a10410366b17eeb428e27}} 
+\index{Math@{Math}!Atan2@{Atan2}}
+\index{Atan2@{Atan2}!Math@{Math}}
+\doxysubsubsection{\texorpdfstring{Atan2()}{Atan2()}}
+{\footnotesize\ttfamily float Math\+::\+Atan2 (\begin{DoxyParamCaption}\item[{float}]{y,  }\item[{float}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{namespace_math_ae348b8156aa833e26c8446c6ab457bd9}\label{namespace_math_ae348b8156aa833e26c8446c6ab457bd9}} 
+\index{Math@{Math}!Clamp@{Clamp}}
+\index{Clamp@{Clamp}!Math@{Math}}
+\doxysubsubsection{\texorpdfstring{Clamp()}{Clamp()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T Math\+::\+Clamp (\begin{DoxyParamCaption}\item[{const T \&}]{value,  }\item[{const T \&}]{lower,  }\item[{const T \&}]{upper }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespace_math_aa074fcf7b6939cf932df3a027947ae37}\label{namespace_math_aa074fcf7b6939cf932df3a027947ae37}} 
+\index{Math@{Math}!Cos@{Cos}}
+\index{Cos@{Cos}!Math@{Math}}
+\doxysubsubsection{\texorpdfstring{Cos()}{Cos()}}
+{\footnotesize\ttfamily float Math\+::\+Cos (\begin{DoxyParamCaption}\item[{float}]{angle }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{namespace_math_afddb55583d9acfd5110f95d44929257e}\label{namespace_math_afddb55583d9acfd5110f95d44929257e}} 
+\index{Math@{Math}!Cot@{Cot}}
+\index{Cot@{Cot}!Math@{Math}}
+\doxysubsubsection{\texorpdfstring{Cot()}{Cot()}}
+{\footnotesize\ttfamily float Math\+::\+Cot (\begin{DoxyParamCaption}\item[{float}]{angle }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{namespace_math_a2be599e707eb198f17063c557c756866}\label{namespace_math_a2be599e707eb198f17063c557c756866}} 
+\index{Math@{Math}!Fmod@{Fmod}}
+\index{Fmod@{Fmod}!Math@{Math}}
+\doxysubsubsection{\texorpdfstring{Fmod()}{Fmod()}}
+{\footnotesize\ttfamily float Math\+::\+Fmod (\begin{DoxyParamCaption}\item[{float}]{numer,  }\item[{float}]{denom }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{namespace_math_a3a01ad3e3faa4943b5872ff46162d9a9}\label{namespace_math_a3a01ad3e3faa4943b5872ff46162d9a9}} 
+\index{Math@{Math}!Lerp@{Lerp}}
+\index{Lerp@{Lerp}!Math@{Math}}
+\doxysubsubsection{\texorpdfstring{Lerp()}{Lerp()}}
+{\footnotesize\ttfamily float Math\+::\+Lerp (\begin{DoxyParamCaption}\item[{float}]{a,  }\item[{float}]{b,  }\item[{float}]{f }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{namespace_math_af8f40a36d58f6b3e327438b1463cc3b4}\label{namespace_math_af8f40a36d58f6b3e327438b1463cc3b4}} 
+\index{Math@{Math}!Max@{Max}}
+\index{Max@{Max}!Math@{Math}}
+\doxysubsubsection{\texorpdfstring{Max()}{Max()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T Math\+::\+Max (\begin{DoxyParamCaption}\item[{const T \&}]{a,  }\item[{const T \&}]{b }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespace_math_aec7764d447f7491c4d3b02da52ea1ea9}\label{namespace_math_aec7764d447f7491c4d3b02da52ea1ea9}} 
+\index{Math@{Math}!Min@{Min}}
+\index{Min@{Min}!Math@{Math}}
+\doxysubsubsection{\texorpdfstring{Min()}{Min()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T Math\+::\+Min (\begin{DoxyParamCaption}\item[{const T \&}]{a,  }\item[{const T \&}]{b }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespace_math_a5359e1af9f3fe98ab3c8b184b2b19308}\label{namespace_math_a5359e1af9f3fe98ab3c8b184b2b19308}} 
+\index{Math@{Math}!NearZero@{NearZero}}
+\index{NearZero@{NearZero}!Math@{Math}}
+\doxysubsubsection{\texorpdfstring{NearZero()}{NearZero()}}
+{\footnotesize\ttfamily bool Math\+::\+Near\+Zero (\begin{DoxyParamCaption}\item[{float}]{val,  }\item[{float}]{epsilon = {\ttfamily 0.001f} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{namespace_math_ae1b5c5b012bf0a3485bd21bd28bb36ac}\label{namespace_math_ae1b5c5b012bf0a3485bd21bd28bb36ac}} 
+\index{Math@{Math}!Sin@{Sin}}
+\index{Sin@{Sin}!Math@{Math}}
+\doxysubsubsection{\texorpdfstring{Sin()}{Sin()}}
+{\footnotesize\ttfamily float Math\+::\+Sin (\begin{DoxyParamCaption}\item[{float}]{angle }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{namespace_math_aa1686f3cdacf185fd09a4a9d41427936}\label{namespace_math_aa1686f3cdacf185fd09a4a9d41427936}} 
+\index{Math@{Math}!Sqrt@{Sqrt}}
+\index{Sqrt@{Sqrt}!Math@{Math}}
+\doxysubsubsection{\texorpdfstring{Sqrt()}{Sqrt()}}
+{\footnotesize\ttfamily float Math\+::\+Sqrt (\begin{DoxyParamCaption}\item[{float}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{namespace_math_a52a61bb1378447dbbc1e09196e0f74c3}\label{namespace_math_a52a61bb1378447dbbc1e09196e0f74c3}} 
+\index{Math@{Math}!Tan@{Tan}}
+\index{Tan@{Tan}!Math@{Math}}
+\doxysubsubsection{\texorpdfstring{Tan()}{Tan()}}
+{\footnotesize\ttfamily float Math\+::\+Tan (\begin{DoxyParamCaption}\item[{float}]{angle }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{namespace_math_a0d041d1f5cd6c4ee20734f24f6abf1f0}\label{namespace_math_a0d041d1f5cd6c4ee20734f24f6abf1f0}} 
+\index{Math@{Math}!ToDegrees@{ToDegrees}}
+\index{ToDegrees@{ToDegrees}!Math@{Math}}
+\doxysubsubsection{\texorpdfstring{ToDegrees()}{ToDegrees()}}
+{\footnotesize\ttfamily float Math\+::\+To\+Degrees (\begin{DoxyParamCaption}\item[{float}]{radians }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{namespace_math_a3cb686c95bbcce3f8a96a9214263aaaa}\label{namespace_math_a3cb686c95bbcce3f8a96a9214263aaaa}} 
+\index{Math@{Math}!ToRadians@{ToRadians}}
+\index{ToRadians@{ToRadians}!Math@{Math}}
+\doxysubsubsection{\texorpdfstring{ToRadians()}{ToRadians()}}
+{\footnotesize\ttfamily float Math\+::\+To\+Radians (\begin{DoxyParamCaption}\item[{float}]{degrees }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{変数詳解}
+\mbox{\Hypertarget{namespace_math_a117c19ae2016c83f0ebf13333f629397}\label{namespace_math_a117c19ae2016c83f0ebf13333f629397}} 
+\index{Math@{Math}!Infinity@{Infinity}}
+\index{Infinity@{Infinity}!Math@{Math}}
+\doxysubsubsection{\texorpdfstring{Infinity}{Infinity}}
+{\footnotesize\ttfamily const float Math\+::\+Infinity = std\+::numeric\+\_\+limits$<$float$>$\+::infinity()}
+
+\mbox{\Hypertarget{namespace_math_aea217efd42cdbf1a07a45d128e87b245}\label{namespace_math_aea217efd42cdbf1a07a45d128e87b245}} 
+\index{Math@{Math}!NegInfinity@{NegInfinity}}
+\index{NegInfinity@{NegInfinity}!Math@{Math}}
+\doxysubsubsection{\texorpdfstring{NegInfinity}{NegInfinity}}
+{\footnotesize\ttfamily const float Math\+::\+Neg\+Infinity = -\/std\+::numeric\+\_\+limits$<$float$>$\+::infinity()}
+
+\mbox{\Hypertarget{namespace_math_abc2f17b5e6cb4da17f718364aedafa8e}\label{namespace_math_abc2f17b5e6cb4da17f718364aedafa8e}} 
+\index{Math@{Math}!Pi@{Pi}}
+\index{Pi@{Pi}!Math@{Math}}
+\doxysubsubsection{\texorpdfstring{Pi}{Pi}}
+{\footnotesize\ttfamily const float Math\+::\+Pi = 3.\+1415926535f}
+

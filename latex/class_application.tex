@@ -1,0 +1,187 @@
+\hypertarget{class_application}{}\doxysection{Application クラス}
+\label{class_application}\index{Application@{Application}}
+
+
+{\ttfamily \#include $<$Application.\+h$>$}
+
+Application の継承関係図\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_application}
+\end{center}
+\end{figure}
+\doxysubsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_application_afa8cc05ce6b6092be5ecdfdae44e05f8}{Application}} ()
+\begin{DoxyCompactList}\small\item\em コンストラクタ \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_application_a748bca84fefb9c12661cfaa2f623748d}{$\sim$\+Application}} ()
+\begin{DoxyCompactList}\small\item\em デストラクタ \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_application_a8429472801f7fc084e388a4ac84fd753}{Boot}} ()
+\begin{DoxyCompactList}\small\item\em 初期化関数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_application_a71afeb0e0004041abdd9090204dc0da6}{Init\+Window}} (HINSTANCE h\+Instance, HINSTANCE h\+Prev\+Instance, LPWSTR lp\+Cmd\+Line, int n\+Cmd\+Show, const TCHAR $\ast$app\+Name)
+\begin{DoxyCompactList}\small\item\em ウィンドウの初期化 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_application_ad8f6f5be192bdf2d81cb5c852993a889}{Dispatch\+Window\+Message}} ()
+\begin{DoxyCompactList}\small\item\em ウィンドウメッセージをディスパッチ \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_application_a5fee66ae0ed8fce51bfb6427eee1c488}{Register\+Object}} (class \mbox{\hyperlink{class_object}{Object}} $\ast$object)
+\begin{DoxyCompactList}\small\item\em 生成したオブジェクトを、マネージャーに登録する \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{静的公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+static LRESULT CALLBACK \mbox{\hyperlink{class_application_a06ce223db894cb2d1bdb21998b64ae18}{Msg\+Proc}} (HWND h\+Wnd, UINT msg, WPARAM w\+Param, LPARAM l\+Param)
+\begin{DoxyCompactList}\small\item\em メッセージプロシージャ \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{限定公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_application_aef53dc18b48d8ae5e7fc35a6c7ae5059}{Initialize}} ()=0
+\item 
+virtual void \mbox{\hyperlink{class_application_a6b6a0f3dee7a353f28d3f3fec6a4cb89}{Update}} ()=0
+\item 
+virtual void \mbox{\hyperlink{class_application_a62f76cee9d16d4f8f0be4423c2559368}{Finalize}} ()=0
+\end{DoxyCompactItemize}
+\doxysubsection*{限定公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_object_manager}{Object\+Manager}} $\ast$ \mbox{\hyperlink{class_application_a7d4610a35a20dc55e81e7c7cd04c9b89}{object\+Manager}}
+\item 
+class \mbox{\hyperlink{class_renderer}{Renderer}} $\ast$ \mbox{\hyperlink{class_application_a3186f6ee4d94bce35cd331d0aa12da33}{renderer}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{構築子と解体子}
+\mbox{\Hypertarget{class_application_afa8cc05ce6b6092be5ecdfdae44e05f8}\label{class_application_afa8cc05ce6b6092be5ecdfdae44e05f8}} 
+\index{Application@{Application}!Application@{Application}}
+\index{Application@{Application}!Application@{Application}}
+\doxysubsubsection{\texorpdfstring{Application()}{Application()}}
+{\footnotesize\ttfamily Application\+::\+Application (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+コンストラクタ 
+
+\mbox{\Hypertarget{class_application_a748bca84fefb9c12661cfaa2f623748d}\label{class_application_a748bca84fefb9c12661cfaa2f623748d}} 
+\index{Application@{Application}!````~Application@{$\sim$Application}}
+\index{````~Application@{$\sim$Application}!Application@{Application}}
+\doxysubsubsection{\texorpdfstring{$\sim$Application()}{~Application()}}
+{\footnotesize\ttfamily Application\+::$\sim$\+Application (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+デストラクタ 
+
+
+
+\doxysubsection{関数詳解}
+\mbox{\Hypertarget{class_application_a8429472801f7fc084e388a4ac84fd753}\label{class_application_a8429472801f7fc084e388a4ac84fd753}} 
+\index{Application@{Application}!Boot@{Boot}}
+\index{Boot@{Boot}!Application@{Application}}
+\doxysubsubsection{\texorpdfstring{Boot()}{Boot()}}
+{\footnotesize\ttfamily void Application\+::\+Boot (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+初期化関数 
+
+ゲームアプリケーション起動時の初期化処理 \mbox{\Hypertarget{class_application_ad8f6f5be192bdf2d81cb5c852993a889}\label{class_application_ad8f6f5be192bdf2d81cb5c852993a889}} 
+\index{Application@{Application}!DispatchWindowMessage@{DispatchWindowMessage}}
+\index{DispatchWindowMessage@{DispatchWindowMessage}!Application@{Application}}
+\doxysubsubsection{\texorpdfstring{DispatchWindowMessage()}{DispatchWindowMessage()}}
+{\footnotesize\ttfamily bool Application\+::\+Dispatch\+Window\+Message (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+ウィンドウメッセージをディスパッチ 
+
+\mbox{\Hypertarget{class_application_a62f76cee9d16d4f8f0be4423c2559368}\label{class_application_a62f76cee9d16d4f8f0be4423c2559368}} 
+\index{Application@{Application}!Finalize@{Finalize}}
+\index{Finalize@{Finalize}!Application@{Application}}
+\doxysubsubsection{\texorpdfstring{Finalize()}{Finalize()}}
+{\footnotesize\ttfamily virtual void Application\+::\+Finalize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+\mbox{\hyperlink{class_sample_game_a086374a8b325ec8ea4267373737093c3}{Sample\+Game}}で実装されています。
+
+\mbox{\Hypertarget{class_application_aef53dc18b48d8ae5e7fc35a6c7ae5059}\label{class_application_aef53dc18b48d8ae5e7fc35a6c7ae5059}} 
+\index{Application@{Application}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!Application@{Application}}
+\doxysubsubsection{\texorpdfstring{Initialize()}{Initialize()}}
+{\footnotesize\ttfamily virtual void Application\+::\+Initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+\mbox{\hyperlink{class_sample_game_a1a3bbb85b61320b9737cece34338dd7f}{Sample\+Game}}で実装されています。
+
+\mbox{\Hypertarget{class_application_a71afeb0e0004041abdd9090204dc0da6}\label{class_application_a71afeb0e0004041abdd9090204dc0da6}} 
+\index{Application@{Application}!InitWindow@{InitWindow}}
+\index{InitWindow@{InitWindow}!Application@{Application}}
+\doxysubsubsection{\texorpdfstring{InitWindow()}{InitWindow()}}
+{\footnotesize\ttfamily void Application\+::\+Init\+Window (\begin{DoxyParamCaption}\item[{HINSTANCE}]{h\+Instance,  }\item[{HINSTANCE}]{h\+Prev\+Instance,  }\item[{LPWSTR}]{lp\+Cmd\+Line,  }\item[{int}]{n\+Cmd\+Show,  }\item[{const TCHAR $\ast$}]{app\+Name }\end{DoxyParamCaption})}
+
+
+
+ウィンドウの初期化 
+
+\mbox{\Hypertarget{class_application_a06ce223db894cb2d1bdb21998b64ae18}\label{class_application_a06ce223db894cb2d1bdb21998b64ae18}} 
+\index{Application@{Application}!MsgProc@{MsgProc}}
+\index{MsgProc@{MsgProc}!Application@{Application}}
+\doxysubsubsection{\texorpdfstring{MsgProc()}{MsgProc()}}
+{\footnotesize\ttfamily LRESULT CALLBACK Application\+::\+Msg\+Proc (\begin{DoxyParamCaption}\item[{HWND}]{h\+Wnd,  }\item[{UINT}]{msg,  }\item[{WPARAM}]{w\+Param,  }\item[{LPARAM}]{l\+Param }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+メッセージプロシージャ 
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{ in}}  & {\em h\+Wnd} & メッセージを送ってきたウィンドウのハンドル \\
+\hline
+\mbox{\texttt{ in}}  & {\em msg} & メッセージの種類 w\+Paramとl\+Paramは引数 \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_application_a5fee66ae0ed8fce51bfb6427eee1c488}\label{class_application_a5fee66ae0ed8fce51bfb6427eee1c488}} 
+\index{Application@{Application}!RegisterObject@{RegisterObject}}
+\index{RegisterObject@{RegisterObject}!Application@{Application}}
+\doxysubsubsection{\texorpdfstring{RegisterObject()}{RegisterObject()}}
+{\footnotesize\ttfamily void Application\+::\+Register\+Object (\begin{DoxyParamCaption}\item[{class \mbox{\hyperlink{class_object}{Object}} $\ast$}]{object }\end{DoxyParamCaption})}
+
+
+
+生成したオブジェクトを、マネージャーに登録する 
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{ in}}  & {\em object} & 登録するオブジェクトのポインタ \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_application_a6b6a0f3dee7a353f28d3f3fec6a4cb89}\label{class_application_a6b6a0f3dee7a353f28d3f3fec6a4cb89}} 
+\index{Application@{Application}!Update@{Update}}
+\index{Update@{Update}!Application@{Application}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily virtual void Application\+::\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+\mbox{\hyperlink{class_sample_game_a7a8fbad0352500fb8180da8a2c1b4d2e}{Sample\+Game}}で実装されています。
+
+
+
+\doxysubsection{メンバ詳解}
+\mbox{\Hypertarget{class_application_a7d4610a35a20dc55e81e7c7cd04c9b89}\label{class_application_a7d4610a35a20dc55e81e7c7cd04c9b89}} 
+\index{Application@{Application}!objectManager@{objectManager}}
+\index{objectManager@{objectManager}!Application@{Application}}
+\doxysubsubsection{\texorpdfstring{objectManager}{objectManager}}
+{\footnotesize\ttfamily class \mbox{\hyperlink{class_object_manager}{Object\+Manager}}$\ast$ Application\+::object\+Manager\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_application_a3186f6ee4d94bce35cd331d0aa12da33}\label{class_application_a3186f6ee4d94bce35cd331d0aa12da33}} 
+\index{Application@{Application}!renderer@{renderer}}
+\index{renderer@{renderer}!Application@{Application}}
+\doxysubsubsection{\texorpdfstring{renderer}{renderer}}
+{\footnotesize\ttfamily class \mbox{\hyperlink{class_renderer}{Renderer}}$\ast$ Application\+::renderer\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+DXEngine2\+D/\mbox{\hyperlink{_application_8h}{Application.\+h}}\item 
+DXEngine2\+D/\mbox{\hyperlink{_application_8cpp}{Application.\+cpp}}\end{DoxyCompactItemize}
