@@ -9,6 +9,9 @@
 #include "Renderer.h"
 #include "RenderComponent.h"
 
+#pragma comment(lib,"d3d12.lib")
+#pragma comment(lib,"dxgi.lib")
+
 Renderer* Renderer::mInstance = nullptr;
 
 /**
