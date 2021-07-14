@@ -59,13 +59,28 @@ public:
 
 
 private:
-    /// DXGI(DirectX Graphics Infrastructure)Factoryを作成する
+    //! DXGI(DirectX Graphics Infrastructure)Factoryを作成する
     IDXGIFactory4* CreateDXGIFactory();
+
+    //! D3Dデバイスを作成する
+    bool CreateD3DDevice(IDXGIFactory4* dxgiFactory);
 
 
 
 private:
+    /// <summary>
+    /// GPUベンダー定義
+    /// </summary>
+    enum GPU_Vender {
+        GPU_VenderNvidia,   //! NVIDIA
+        GPU_VenderAMD,      //! Intel
+        GPU_VenderIntel,    //! AMD
+        Num_GPUVender,
+    };
 
-    std::vector<class RenderComponent*> renderList;
-    static Renderer* mInstance;
+    std::vector<class RenderComponent*> _renderList;
+    static Renderer* kInstance;
+
+    ID3D12Device5* _d3d_device = nullptr;
+
 };
