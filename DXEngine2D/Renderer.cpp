@@ -228,3 +228,35 @@ bool Renderer::CreateD3DDevice(IDXGIFactory4* dxgiFactory)
 
   return _d3d_device != nullptr;
 }
+
+/**
+ * @brief       コマンドキューの作成
+ * @details
+ */
+bool Renderer::CreateCommandQueue() {
+  D3D12_COMMAND_QUEUE_DESC queueDesc = {};
+  queueDesc.Flags = D3D12_COMMAND_QUEUE_FLAG_NONE;
+  queueDesc.Type = D3D12_COMMAND_LIST_TYPE_DIRECT;
+
+  auto hr = _d3d_device->CreateCommandQueue(&queueDesc, IID_PPV_ARGS(&_commandQueue));
+  if (FAILED(hr)) {
+    //! コマンドキューの作成
+    return false;
+  }
+  return true;
+}
+
+/**
+ * @brief       スワップチェインの作成
+ * @details
+ */
+bool Renderer::CreateSwapChain(
+  HWND hwnd, UINT frameBufferWidth, UINT frameBufferHeight,IDXGIFactory4* dxgiFactory
+)
+{
+  return true;
+}
+
+
+
+

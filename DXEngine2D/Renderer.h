@@ -51,7 +51,7 @@ public:
     UINT GetCbrSrvDescriptorSize() const;
 
     // サンプラのディスクリプタヒープサイズを取得
-    UINT GetSamplerDescriptorSizze() const;
+    UINT GetSamplerDescriptorSize() const;
 
     // レンダリングコンテキストを取得
     //RenderContext& GetRenderContext();
@@ -65,12 +65,24 @@ private:
     //! D3Dデバイスを作成する
     bool CreateD3DDevice(IDXGIFactory4* dxgiFactory);
 
+    //! コマンドキューの作成
+    bool CreateCommandQueue();
 
+    //! スワップチェインの作成
+    //! @param hwnd Windowハンドル
+    //! @param frameBufferWidth フレームバッファの幅
+    //! @param frameBufferHeight フレームバッファの高さ
+    //! @param dxgiFactory DirectX グラフィックス インフラストラクチャー
+    //! @return true 作成に成功
+    bool CreateSwapChain(
+      HWND hwnd,
+      UINT frameBufferWidth,
+      UINT frameBufferHeight,
+      IDXGIFactory4* dxgiFactory
+    );
 
 private:
-    /// <summary>
-    /// GPUベンダー定義
-    /// </summary>
+    //! GPUベンダー定義
     enum GPU_Vender {
         GPU_VenderNvidia,   //! NVIDIA
         GPU_VenderAMD,      //! Intel
@@ -81,6 +93,7 @@ private:
     std::vector<class RenderComponent*> _renderList;
     static Renderer* kInstance;
 
-    ID3D12Device5* _d3d_device = nullptr;
+    ID3D12Device5* _d3d_device          = nullptr;  //! D3Dデバイス
+    ID3D12CommandQueue* _commandQueue   = nullptr;  //! コマンドキュー
 
 };
