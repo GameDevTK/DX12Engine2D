@@ -81,6 +81,8 @@ private:
       IDXGIFactory4* dxgiFactory
     );
 
+public:
+  enum {FRAME_BUFFER_COUNT = 2 }; // フレームバッファの数
 private:
     //! GPUベンダー定義
     enum GPU_Vender {
@@ -95,5 +97,8 @@ private:
 
     ID3D12Device5* _d3d_device          = nullptr;  //! D3Dデバイス
     ID3D12CommandQueue* _commandQueue   = nullptr;  //! コマンドキュー
+    IDXGISwapChain3* _swapChain         = nullptr;  //! スワップチェイン
+    int _currentBackBufferIndex         = 0;        //! 現在のバックバッファの番号
+
 
 };

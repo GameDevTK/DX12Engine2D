@@ -41,15 +41,19 @@ void Renderer::Initialize()
   if(kInstance == nullptr)
     kInstance = this;
 
-  // デバイスにアクセスするためのインターフェースを作成
+  //! デバイスにアクセスするためのインターフェースを作成
   auto dxgiFactory = CreateDXGIFactory();
-  // D3Dデバイスの作成
+  //! D3Dデバイスの作成
   if (!CreateD3DDevice(dxgiFactory))
   {
-    // D3Dデバイスの作成に失敗
+    //! D3Dデバイスの作成に失敗
+    return;
   }
 
+  //! コマンドキューの作成
+  if (!CreateCommandQueue()) {
 
+  }
 
   // 初期化が終わったのでDXGIを破棄
   dxgiFactory->Release();
@@ -231,7 +235,7 @@ bool Renderer::CreateD3DDevice(IDXGIFactory4* dxgiFactory)
 
 /**
  * @brief       コマンドキューの作成
- * @details
+ * @details     GPUに対して命令を発行するためのキュー
  */
 bool Renderer::CreateCommandQueue() {
   D3D12_COMMAND_QUEUE_DESC queueDesc = {};
@@ -248,15 +252,36 @@ bool Renderer::CreateCommandQueue() {
 
 /**
  * @brief       スワップチェインの作成
- * @details
+ * @details     バックバッファを管理して、表画面を切り替える機構
  */
 bool Renderer::CreateSwapChain(
   HWND hwnd, UINT frameBufferWidth, UINT frameBufferHeight,IDXGIFactory4* dxgiFactory
 )
 {
+  DXGI_SWAP_CHAIN_DESC1 swapChainDesc = {};
+  swapChainDesc.BufferCount       = FRAME_BUFFER_COUNT;
+  swapChainDesc.Width             = frameBufferWidth;
+  swapChainDesc.Height            = frameBufferHeight;
+  swapChainDesc.Format            = DXGI_FORMAT_R8G8B8A8_UNORM;
+  swapChainDesc.BufferUsage       = DXGI_USAGE_RENDER_TARGET_OUTPUT;
+  swapChainDesc.SwapEffect        = DXGI_SWAP_EFFECT_FLIP_DISCARD;
+  swapChainDesc.SampleDesc.Count  = 1;
+
+  IDXGISwapChain1* swapChain;
+  dxgiFactory->CreateSwapChainForHwnd(
+    _commandQueue,
+    hwnd,
+    &swapChainDesc,
+    nullptr,
+    nullptr,
+    &swapChain
+  );
+
+  // IDXGISwapChain3のインターフェースを取得
+  swapChain->QueryInterface(IID_PPV_ARGS(&_swapChain));
+  swapChain->Release();
+  // IDXGISwapChain3のインターフェースを取得
+  _currentBackBufferIndex = _swapChain->GetCurrentBackBufferIndex();
   return true;
 }
-
-
-
 
