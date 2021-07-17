@@ -151,7 +151,79 @@ bool Renderer::CreateD3DDevice(IDXGIFactory4* dxgiFactory)
   {
     DXGI_ADAPTER_DESC desc;
     adapterTmp->GetDesc(&desc);
+
+    if (desc.DedicatedVideoMemory > videoMemorySize) {
+      // ビデオメモリの方が多いので、こちらを使う
+      if (adapterMaxVideoMemory != nullptr)
+      {
+        adapterMaxVideoMemory->Release();
+      }
+      adapterMaxVideoMemory = adapterTmp;
+      adapterMaxVideoMemory->AddRef();
+      videoMemorySize = desc.DedicatedVideoMemory;
+    }
+
+    if (wcsstr(desc.Description, L"NVIDIA") != nullptr) {
+      // NVIDIA製
+      if (adapterVender[GPU_VenderNvidia]) {
+        adapterVender[GPU_VenderNvidia]->Release();
+      }
+      adapterVender[GPU_VenderNvidia] = adapterTmp;
+      adapterVender[GPU_VenderNvidia]->AddRef();
+    }
+    else if (wcsstr(desc.Description, L"AMD") != nullptr) {
+      // AMD製
+      if (adapterVender[GPU_VenderAMD]) {
+        adapterVender[GPU_VenderAMD]->Release();
+      }
+      adapterVender[GPU_VenderAMD] = adapterTmp;
+      adapterVender[GPU_VenderAMD]->AddRef();
+    }
+    else if (wcsstr(desc.Description, L"Intel") != nullptr) {
+      // Intel製
+      if (adapterVender[GPU_VenderIntel]) {
+        adapterVender[GPU_VenderIntel]->Release();
+      }
+      adapterVender[GPU_VenderIntel] = adapterTmp;
+      adapterVender[GPU_VenderIntel]->AddRef();
+    }
     adapterTmp->Release();
+  }
+
+  // 使用するアダプターを決める
+  if (adapterVender[GPU_VenderNvidia] != nullptr) {
+    // NVIDIA製が最優先
+    useAdapter = adapterVender[GPU_VenderNvidia];
+  }
+  else if (adapterVender[GPU_VenderAMD] != nullptr) {
+    // 次はAMDが優先
+    useAdapter = adapterVender[GPU_VenderAMD];
+  }
+  else {
+    // NVIDIAとAMDのGPUがなければビデオメモリが一番多いやつを使う
+    useAdapter = adapterMaxVideoMemory;
+  }
+
+  for (auto featureLevel : featureLevels) {
+    auto hr = D3D12CreateDevice(
+      useAdapter,
+      featureLevel,
+      IID_PPV_ARGS(&_d3d_device)
+    );
+    if (SUCCEEDED(hr)) {
+      // D3Dデバイスの作成
+      break;
+    }
+  }
+
+  for (auto& adapter : adapterVender) {
+    if (adapter) {
+      adapter->Release();
+    }
+  }
+
+  if (adapterMaxVideoMemory) {
+    adapterMaxVideoMemory->Release();
   }
 
   return _d3d_device != nullptr;
