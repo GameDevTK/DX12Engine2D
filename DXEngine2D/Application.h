@@ -42,7 +42,7 @@ protected:
 
 private:
 
-    HWND hWnd;
+    HWND _hwnd;
 
 };
 

@@ -19,9 +19,17 @@ Renderer* Renderer::kInstance = nullptr;
 /**
  * @brief   コンストラクタ
  */
-Renderer::Renderer()
+Renderer::Renderer(InitData& data)
+  : _d3dDevice              (nullptr)
+  , _commandQueue           (nullptr)
+  , _swapChain              (nullptr)
+  , _currentBackBufferIndex (0)
+  , _rtvHeap                (nullptr)
+  , _dsvHeap                (nullptr)
+  , _rtvDescriptorSize      (0)
+  , _dsvDescriptorSize      (0)
 {
-
+  _initData = data;
 }
 
 /**
@@ -46,13 +54,19 @@ void Renderer::Initialize()
   //! D3Dデバイスの作成
   if (!CreateD3DDevice(dxgiFactory))
   {
-    //! D3Dデバイスの作成に失敗
     return;
   }
+  _initData.dxgiFactory = dxgiFactory;
 
   //! コマンドキューの作成
   if (!CreateCommandQueue()) {
+    return;
+  }
 
+  // スワップチェインの作成
+  if (!CreateSwapChain())
+  {
+    return;
   }
 
   // 初期化が終わったのでDXGIを破棄
@@ -212,7 +226,7 @@ bool Renderer::CreateD3DDevice(IDXGIFactory4* dxgiFactory)
     auto hr = D3D12CreateDevice(
       useAdapter,
       featureLevel,
-      IID_PPV_ARGS(&_d3d_device)
+      IID_PPV_ARGS(&_d3dDevice)
     );
     if (SUCCEEDED(hr)) {
       // D3Dデバイスの作成
@@ -230,7 +244,7 @@ bool Renderer::CreateD3DDevice(IDXGIFactory4* dxgiFactory)
     adapterMaxVideoMemory->Release();
   }
 
-  return _d3d_device != nullptr;
+  return _d3dDevice != nullptr;
 }
 
 /**
@@ -242,7 +256,7 @@ bool Renderer::CreateCommandQueue() {
   queueDesc.Flags = D3D12_COMMAND_QUEUE_FLAG_NONE;
   queueDesc.Type = D3D12_COMMAND_LIST_TYPE_DIRECT;
 
-  auto hr = _d3d_device->CreateCommandQueue(&queueDesc, IID_PPV_ARGS(&_commandQueue));
+  auto hr = _d3dDevice->CreateCommandQueue(&queueDesc, IID_PPV_ARGS(&_commandQueue));
   if (FAILED(hr)) {
     //! コマンドキューの作成
     return false;
@@ -254,8 +268,24 @@ bool Renderer::CreateCommandQueue() {
  * @brief       スワップチェインの作成
  * @details     バックバッファを管理して、表画面を切り替える機構
  */
+bool Renderer::CreateSwapChain() {
+  return CreateSwapChain(
+    _initData.hwnd,
+    _initData.frameBufferWidth,
+    _initData.frameBufferHeight,
+    _initData.dxgiFactory
+  );
+};
+
+/**
+ * @brief       スワップチェインの作成
+ * @details     バックバッファを管理して、表画面を切り替える機構
+ */
 bool Renderer::CreateSwapChain(
-  HWND hwnd, UINT frameBufferWidth, UINT frameBufferHeight,IDXGIFactory4* dxgiFactory
+  HWND hwnd,
+  UINT frameBufferWidth,
+  UINT frameBufferHeight,
+  IDXGIFactory4* dxgiFactory
 )
 {
   DXGI_SWAP_CHAIN_DESC1 swapChainDesc = {};
@@ -268,7 +298,7 @@ bool Renderer::CreateSwapChain(
   swapChainDesc.SampleDesc.Count  = 1;
 
   IDXGISwapChain1* swapChain;
-  dxgiFactory->CreateSwapChainForHwnd(
+  auto result = dxgiFactory->CreateSwapChainForHwnd(
     _commandQueue,
     hwnd,
     &swapChainDesc,
@@ -284,4 +314,42 @@ bool Renderer::CreateSwapChain(
   _currentBackBufferIndex = _swapChain->GetCurrentBackBufferIndex();
   return true;
 }
+
+/**
+ * @brief     フレームバッファ用のディスクリプタヒープを作成
+ * @details   
+ */
+bool Renderer::CreateDescriptorHeapForFrameBuffer()
+{
+  //! RTV用のディスクリプタヒープ
+  D3D12_DESCRIPTOR_HEAP_DESC desc = {};
+  desc.NumDescriptors = FRAME_BUFFER_COUNT;
+  desc.Type           = D3D12_DESCRIPTOR_HEAP_TYPE_RTV;
+  desc.Flags          = D3D12_DESCRIPTOR_HEAP_FLAG_NONE;
+
+  //! RTV用のディスクリプタヒープの作成
+  auto hr = _d3dDevice->CreateDescriptorHeap(&desc, IID_PPV_ARGS(&_dsvHeap));
+  if (FAILED(hr)) {
+    return false;
+  }
+
+  //! ディスクリプタのサイズを取得
+  _dsvDescriptorSize = _d3dDevice->GetDescriptorHandleIncrementSize(D3D12_DESCRIPTOR_HEAP_TYPE_DSV);
+
+  //! DSV用のディスクリプタヒープを作成
+  desc.NumDescriptors = 1;
+  desc.Type = D3D12_DESCRIPTOR_HEAP_TYPE_DSV;
+  hr = _d3dDevice->CreateDescriptorHeap(&desc, IID_PPV_ARGS(&_dsvHeap));
+  if (FAILED(hr)) {
+    return false;
+  }
+
+  //! ディスクリプタのサイズ取得
+  _dsvDescriptorSize = _d3dDevice->CreateDescriptorHeap(&desc, IID_PPV_ARGS(&_dsvHeap));
+
+
+  return true;
+}
+
+
 

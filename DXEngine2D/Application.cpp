@@ -15,7 +15,7 @@
  * @brief   コンストラクタ
  */
 Application::Application()
-    : hWnd          (NULL)
+    : _hwnd         (NULL)
     , objectManager (nullptr)
     , renderer      (nullptr)
 {
@@ -64,11 +64,15 @@ void Application::Boot()
  */
 void Application::InitializeSystem()
 {
-    renderer = new Renderer();
-    renderer->Initialize();
+  Renderer::InitData data;
+  data.hwnd = _hwnd;
+  data.frameBufferWidth = FRAME_BUFFER_W;
+  data.frameBufferHeight = FRAME_BUFFER_H;
+  renderer = new Renderer(data);
+  renderer->Initialize();
 
-    objectManager = new ObjectManager();
-    objectManager->Initialize();
+  objectManager = new ObjectManager();
+  objectManager->Initialize();
 
 
 }
@@ -144,7 +148,7 @@ void Application::InitWindow(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPWST
     RegisterClassEx(&wc);
 
     // ウィンドウの作成
-    hWnd = CreateWindow(
+    _hwnd = CreateWindow(
         appName,
         appName,
         WS_OVERLAPPEDWINDOW,
@@ -158,7 +162,7 @@ void Application::InitWindow(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPWST
         NULL
     );
 
-    ShowWindow(hWnd,nCmdShow);
+    ShowWindow(_hwnd,nCmdShow);
 
 }
 
