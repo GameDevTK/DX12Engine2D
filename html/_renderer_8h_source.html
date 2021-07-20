@@ -84,69 +84,100 @@ $(function() {
 <div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="class_renderer.html">   19</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_renderer.html">Renderer</a></div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;{</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <a class="code" href="class_renderer.html#a7ebf46f54dab9905f79b80f7fddb76a6">Renderer</a>();</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <a class="code" href="class_renderer.html#afeee408862d5bd6255a6882d47e6d5cd">~Renderer</a>();</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  <a class="code" href="class_renderer.html#a7ebf46f54dab9905f79b80f7fddb76a6">Renderer</a>();</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  <a class="code" href="class_renderer.html#afeee408862d5bd6255a6882d47e6d5cd">~Renderer</a>();</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_renderer.html#a24e60dfccf32b9cfa5de30f977fb59d1">Initialize</a>();</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_renderer.html#a7cbd30dabcc6cd3b977ae647f6d3f23c">Update</a>();</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_renderer.html#a24b6743f6cb333e61b5409e71eb55528">Finalize</a>();</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_renderer.html#a24e60dfccf32b9cfa5de30f977fb59d1">Initialize</a>();</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_renderer.html#a7cbd30dabcc6cd3b977ae647f6d3f23c">Update</a>();</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_renderer.html#a24b6743f6cb333e61b5409e71eb55528">Finalize</a>();</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_renderer.html#a9619f50269a0f79fe1b6aa431dbeb363">Register</a>(<span class="keyword">class</span> <a class="code" href="class_render_component.html">RenderComponent</a>* <span class="keywordtype">object</span>);</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_renderer.html#a6851911a1220c6f62742aa8e1a4678ba">Unregister</a>(<span class="keyword">class</span> <a class="code" href="class_render_component.html">RenderComponent</a>* <span class="keywordtype">object</span>);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_renderer.html#a9619f50269a0f79fe1b6aa431dbeb363">Register</a>(<span class="keyword">class</span> <a class="code" href="class_render_component.html">RenderComponent</a>* <span class="keywordtype">object</span>);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_renderer.html#a6851911a1220c6f62742aa8e1a4678ba">Unregister</a>(<span class="keyword">class</span> <a class="code" href="class_render_component.html">RenderComponent</a>* <span class="keywordtype">object</span>);</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="comment">// レンダリング開始</span></div>
-<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="class_renderer.html#a0c124d211ea804d7cac145b59e290dbe">   33</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_renderer.html#a0c124d211ea804d7cac145b59e290dbe">BeginRender</a>();</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  <span class="comment">// レンダリング開始</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="class_renderer.html#a0c124d211ea804d7cac145b59e290dbe">   33</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_renderer.html#a0c124d211ea804d7cac145b59e290dbe">BeginRender</a>();</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="comment">// レンダリング終了</span></div>
-<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="class_renderer.html#a9caa68ec12f49c0ac7b1d90ea57887f6">   36</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_renderer.html#a9caa68ec12f49c0ac7b1d90ea57887f6">EndRender</a>();</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  <span class="comment">// レンダリング終了</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="class_renderer.html#a9caa68ec12f49c0ac7b1d90ea57887f6">   36</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_renderer.html#a9caa68ec12f49c0ac7b1d90ea57887f6">EndRender</a>();</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="comment">// D3Dデバイスを取得</span></div>
-<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="class_renderer.html#abc39b51c75a8290ff65557aac7e63095">   39</a></span>&#160;    ID3D12Device5* <a class="code" href="class_renderer.html#abc39b51c75a8290ff65557aac7e63095">GetD3DDevice</a>();</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  <span class="comment">// D3Dデバイスを取得</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="class_renderer.html#abc39b51c75a8290ff65557aac7e63095">   39</a></span>&#160;  ID3D12Device5* <a class="code" href="class_renderer.html#abc39b51c75a8290ff65557aac7e63095">GetD3DDevice</a>();</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="comment">// バックバッファ番号を取得</span></div>
-<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="class_renderer.html#ae08dd5089b51e82e1d1133103e0ae30c">   42</a></span>&#160;    UINT <a class="code" href="class_renderer.html#ae08dd5089b51e82e1d1133103e0ae30c">GetBackBufferIndex</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  <span class="comment">// バックバッファ番号を取得</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="class_renderer.html#ae08dd5089b51e82e1d1133103e0ae30c">   42</a></span>&#160;  UINT <a class="code" href="class_renderer.html#ae08dd5089b51e82e1d1133103e0ae30c">GetBackBufferIndex</a>() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="comment">// コマンドキューを取得</span></div>
-<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="class_renderer.html#acf245ab0d105cb7ad18b902323ef207d">   45</a></span>&#160;    ID3D12CommandQueue* <a class="code" href="class_renderer.html#acf245ab0d105cb7ad18b902323ef207d">GetCommandQueue</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  <span class="comment">// コマンドキューを取得</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="class_renderer.html#acf245ab0d105cb7ad18b902323ef207d">   45</a></span>&#160;  ID3D12CommandQueue* <a class="code" href="class_renderer.html#acf245ab0d105cb7ad18b902323ef207d">GetCommandQueue</a>() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="comment">// コマンドリストを取得</span></div>
-<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="class_renderer.html#a3ead191b35ce165aafc35ea97c28c1ea">   48</a></span>&#160;    ID3D12GraphicsCommandList4* <a class="code" href="class_renderer.html#a3ead191b35ce165aafc35ea97c28c1ea">GetCommandList</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  <span class="comment">// コマンドリストを取得</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="class_renderer.html#a3ead191b35ce165aafc35ea97c28c1ea">   48</a></span>&#160;  ID3D12GraphicsCommandList4* <a class="code" href="class_renderer.html#a3ead191b35ce165aafc35ea97c28c1ea">GetCommandList</a>() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="comment">// CBR_SRVのディスクリプタのサイズを取得</span></div>
-<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="class_renderer.html#a2cbfe2e832a380a7db51d9194868890d">   51</a></span>&#160;    UINT <a class="code" href="class_renderer.html#a2cbfe2e832a380a7db51d9194868890d">GetCbrSrvDescriptorSize</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  <span class="comment">// CBR_SRVのディスクリプタのサイズを取得</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="class_renderer.html#a2cbfe2e832a380a7db51d9194868890d">   51</a></span>&#160;  UINT <a class="code" href="class_renderer.html#a2cbfe2e832a380a7db51d9194868890d">GetCbrSrvDescriptorSize</a>() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="comment">// サンプラのディスクリプタヒープサイズを取得</span></div>
-<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="class_renderer.html#aa7aedf2d8a4276c2134a109141d215b7">   54</a></span>&#160;    UINT <a class="code" href="class_renderer.html#aa7aedf2d8a4276c2134a109141d215b7">GetSamplerDescriptorSizze</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  <span class="comment">// サンプラのディスクリプタヒープサイズを取得</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="class_renderer.html#a71eca6b45fe53b0e068c5d274bd3d869">   54</a></span>&#160;  UINT <a class="code" href="class_renderer.html#a71eca6b45fe53b0e068c5d274bd3d869">GetSamplerDescriptorSize</a>() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="comment">// レンダリングコンテキストを取得</span></div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="comment">//RenderContext&amp; GetRenderContext();</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  <span class="comment">// レンダリングコンテキストを取得</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  <span class="comment">//RenderContext&amp; GetRenderContext();</span></div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    IDXGIFactory4* CreateDXGIFactory();</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  IDXGIFactory4* CreateDXGIFactory();</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    std::vector&lt;class RenderComponent*&gt; renderList;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keyword">static</span> <a class="code" href="class_renderer.html">Renderer</a>* mInstance;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;};</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  <span class="keywordtype">bool</span> CreateD3DDevice(IDXGIFactory4* dxgiFactory);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  <span class="keywordtype">bool</span> CreateCommandQueue();</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  <span class="keywordtype">bool</span> CreateSwapChain(</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    HWND hwnd,</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    UINT frameBufferWidth,</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    UINT frameBufferHeight,</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    IDXGIFactory4* dxgiFactory</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  );</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  <span class="keywordtype">bool</span> CreateDescriptorHeapForFrameBuffer();</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00088"></a><span class="lineno"><a class="line" href="class_renderer.html#a0dacbddcf4e3545312bfe18e00383b7faf562c7cbe78f97fd74eb79e0d006c354">   88</a></span>&#160;  <span class="keyword">enum</span> {<a class="code" href="class_renderer.html#a0dacbddcf4e3545312bfe18e00383b7faf562c7cbe78f97fd74eb79e0d006c354">FRAME_BUFFER_COUNT</a> = 2 }; <span class="comment">// フレームバッファの数</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  <span class="keyword">enum</span> GPU_Vender {</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;      GPU_VenderNvidia,   </div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;      GPU_VenderAMD,      </div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;      GPU_VenderIntel,    </div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;      Num_GPUVender,</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;  };</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;  std::vector&lt;class RenderComponent*&gt; _renderList;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;  <span class="keyword">static</span> <a class="code" href="class_renderer.html">Renderer</a>* kInstance;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;  ID3D12Device5* _d3dDevice           = <span class="keyword">nullptr</span>;  </div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;  ID3D12CommandQueue* _commandQueue   = <span class="keyword">nullptr</span>;  </div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;  IDXGISwapChain3* _swapChain         = <span class="keyword">nullptr</span>;  </div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;  <span class="keywordtype">int</span> _currentBackBufferIndex         = 0;        </div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;  ID3D12DescriptorHeap* _rtvHeap      = <span class="keyword">nullptr</span>;  </div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;  ID3D12DescriptorHeap* _dsvHeap      = <span class="keyword">nullptr</span>;  </div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;  UINT _rtvDescriptorSize             = 0;        </div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;  UINT _dsvDescriptorSize             = 0;        </div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160; </div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160; </div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;};</div>
 <div class="ttc" id="a_object_8h_html"><div class="ttname"><a href="_object_8h.html">Object.h</a></div><div class="ttdoc">オブジェクトクラス</div></div>
 <div class="ttc" id="aclass_render_component_html"><div class="ttname"><a href="class_render_component.html">RenderComponent</a></div><div class="ttdef"><b>Definition:</b> RenderComponent.h:14</div></div>
 <div class="ttc" id="aclass_renderer_html"><div class="ttname"><a href="class_renderer.html">Renderer</a></div><div class="ttdef"><b>Definition:</b> Renderer.h:20</div></div>
 <div class="ttc" id="aclass_renderer_html_a0c124d211ea804d7cac145b59e290dbe"><div class="ttname"><a href="class_renderer.html#a0c124d211ea804d7cac145b59e290dbe">Renderer::BeginRender</a></div><div class="ttdeci">void BeginRender()</div></div>
-<div class="ttc" id="aclass_renderer_html_a24b6743f6cb333e61b5409e71eb55528"><div class="ttname"><a href="class_renderer.html#a24b6743f6cb333e61b5409e71eb55528">Renderer::Finalize</a></div><div class="ttdeci">virtual void Finalize()</div><div class="ttdoc">終了処理関数</div><div class="ttdef"><b>Definition:</b> Renderer.cpp:74</div></div>
+<div class="ttc" id="aclass_renderer_html_a0dacbddcf4e3545312bfe18e00383b7faf562c7cbe78f97fd74eb79e0d006c354"><div class="ttname"><a href="class_renderer.html#a0dacbddcf4e3545312bfe18e00383b7faf562c7cbe78f97fd74eb79e0d006c354">Renderer::FRAME_BUFFER_COUNT</a></div><div class="ttdeci">@ FRAME_BUFFER_COUNT</div><div class="ttdef"><b>Definition:</b> Renderer.h:88</div></div>
+<div class="ttc" id="aclass_renderer_html_a24b6743f6cb333e61b5409e71eb55528"><div class="ttname"><a href="class_renderer.html#a24b6743f6cb333e61b5409e71eb55528">Renderer::Finalize</a></div><div class="ttdeci">virtual void Finalize()</div><div class="ttdoc">終了処理関数</div><div class="ttdef"><b>Definition:</b> Renderer.cpp:79</div></div>
 <div class="ttc" id="aclass_renderer_html_a24e60dfccf32b9cfa5de30f977fb59d1"><div class="ttname"><a href="class_renderer.html#a24e60dfccf32b9cfa5de30f977fb59d1">Renderer::Initialize</a></div><div class="ttdeci">virtual void Initialize()</div><div class="ttdoc">初期化関数</div><div class="ttdef"><b>Definition:</b> Renderer.cpp:39</div></div>
 <div class="ttc" id="aclass_renderer_html_a2cbfe2e832a380a7db51d9194868890d"><div class="ttname"><a href="class_renderer.html#a2cbfe2e832a380a7db51d9194868890d">Renderer::GetCbrSrvDescriptorSize</a></div><div class="ttdeci">UINT GetCbrSrvDescriptorSize() const</div></div>
 <div class="ttc" id="aclass_renderer_html_a3ead191b35ce165aafc35ea97c28c1ea"><div class="ttname"><a href="class_renderer.html#a3ead191b35ce165aafc35ea97c28c1ea">Renderer::GetCommandList</a></div><div class="ttdeci">ID3D12GraphicsCommandList4 * GetCommandList() const</div></div>
-<div class="ttc" id="aclass_renderer_html_a6851911a1220c6f62742aa8e1a4678ba"><div class="ttname"><a href="class_renderer.html#a6851911a1220c6f62742aa8e1a4678ba">Renderer::Unregister</a></div><div class="ttdeci">void Unregister(class RenderComponent *object)</div><div class="ttdoc">オブジェクトを解除する</div><div class="ttdef"><b>Definition:</b> Renderer.cpp:92</div></div>
-<div class="ttc" id="aclass_renderer_html_a7cbd30dabcc6cd3b977ae647f6d3f23c"><div class="ttname"><a href="class_renderer.html#a7cbd30dabcc6cd3b977ae647f6d3f23c">Renderer::Update</a></div><div class="ttdeci">virtual void Update()</div><div class="ttdoc">更新関数</div><div class="ttdef"><b>Definition:</b> Renderer.cpp:62</div></div>
+<div class="ttc" id="aclass_renderer_html_a6851911a1220c6f62742aa8e1a4678ba"><div class="ttname"><a href="class_renderer.html#a6851911a1220c6f62742aa8e1a4678ba">Renderer::Unregister</a></div><div class="ttdeci">void Unregister(class RenderComponent *object)</div><div class="ttdoc">オブジェクトを解除する</div><div class="ttdef"><b>Definition:</b> Renderer.cpp:97</div></div>
+<div class="ttc" id="aclass_renderer_html_a71eca6b45fe53b0e068c5d274bd3d869"><div class="ttname"><a href="class_renderer.html#a71eca6b45fe53b0e068c5d274bd3d869">Renderer::GetSamplerDescriptorSize</a></div><div class="ttdeci">UINT GetSamplerDescriptorSize() const</div></div>
+<div class="ttc" id="aclass_renderer_html_a7cbd30dabcc6cd3b977ae647f6d3f23c"><div class="ttname"><a href="class_renderer.html#a7cbd30dabcc6cd3b977ae647f6d3f23c">Renderer::Update</a></div><div class="ttdeci">virtual void Update()</div><div class="ttdoc">更新関数</div><div class="ttdef"><b>Definition:</b> Renderer.cpp:67</div></div>
 <div class="ttc" id="aclass_renderer_html_a7ebf46f54dab9905f79b80f7fddb76a6"><div class="ttname"><a href="class_renderer.html#a7ebf46f54dab9905f79b80f7fddb76a6">Renderer::Renderer</a></div><div class="ttdeci">Renderer()</div><div class="ttdoc">コンストラクタ</div><div class="ttdef"><b>Definition:</b> Renderer.cpp:22</div></div>
-<div class="ttc" id="aclass_renderer_html_a9619f50269a0f79fe1b6aa431dbeb363"><div class="ttname"><a href="class_renderer.html#a9619f50269a0f79fe1b6aa431dbeb363">Renderer::Register</a></div><div class="ttdeci">void Register(class RenderComponent *object)</div><div class="ttdoc">オブジェクトを登録する</div><div class="ttdef"><b>Definition:</b> Renderer.cpp:83</div></div>
+<div class="ttc" id="aclass_renderer_html_a9619f50269a0f79fe1b6aa431dbeb363"><div class="ttname"><a href="class_renderer.html#a9619f50269a0f79fe1b6aa431dbeb363">Renderer::Register</a></div><div class="ttdeci">void Register(class RenderComponent *object)</div><div class="ttdoc">オブジェクトを登録する</div><div class="ttdef"><b>Definition:</b> Renderer.cpp:88</div></div>
 <div class="ttc" id="aclass_renderer_html_a9caa68ec12f49c0ac7b1d90ea57887f6"><div class="ttname"><a href="class_renderer.html#a9caa68ec12f49c0ac7b1d90ea57887f6">Renderer::EndRender</a></div><div class="ttdeci">void EndRender()</div></div>
-<div class="ttc" id="aclass_renderer_html_aa7aedf2d8a4276c2134a109141d215b7"><div class="ttname"><a href="class_renderer.html#aa7aedf2d8a4276c2134a109141d215b7">Renderer::GetSamplerDescriptorSizze</a></div><div class="ttdeci">UINT GetSamplerDescriptorSizze() const</div></div>
 <div class="ttc" id="aclass_renderer_html_abc39b51c75a8290ff65557aac7e63095"><div class="ttname"><a href="class_renderer.html#abc39b51c75a8290ff65557aac7e63095">Renderer::GetD3DDevice</a></div><div class="ttdeci">ID3D12Device5 * GetD3DDevice()</div></div>
 <div class="ttc" id="aclass_renderer_html_acf245ab0d105cb7ad18b902323ef207d"><div class="ttname"><a href="class_renderer.html#acf245ab0d105cb7ad18b902323ef207d">Renderer::GetCommandQueue</a></div><div class="ttdeci">ID3D12CommandQueue * GetCommandQueue() const</div></div>
 <div class="ttc" id="aclass_renderer_html_ae08dd5089b51e82e1d1133103e0ae30c"><div class="ttname"><a href="class_renderer.html#ae08dd5089b51e82e1d1133103e0ae30c">Renderer::GetBackBufferIndex</a></div><div class="ttdeci">UINT GetBackBufferIndex() const</div></div>

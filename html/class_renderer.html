@@ -62,6 +62,7 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#pub-types">公開型</a> &#124;
 <a href="#pub-methods">公開メンバ関数</a> &#124;
 <a href="class_renderer-members.html">全メンバ一覧</a>  </div>
   <div class="headertitle">
@@ -71,6 +72,12 @@ $(function() {
 
 <p><code>#include &lt;<a class="el" href="_renderer_8h_source.html">Renderer.h</a>&gt;</code></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+公開型</h2></td></tr>
+<tr class="memitem:a0dacbddcf4e3545312bfe18e00383b7f"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <a class="el" href="class_renderer.html#a0dacbddcf4e3545312bfe18e00383b7faf562c7cbe78f97fd74eb79e0d006c354">FRAME_BUFFER_COUNT</a> = 2
+ }</td></tr>
+<tr class="separator:a0dacbddcf4e3545312bfe18e00383b7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 公開メンバ関数</h2></td></tr>
 <tr class="memitem:a7ebf46f54dab9905f79b80f7fddb76a6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_renderer.html#a7ebf46f54dab9905f79b80f7fddb76a6">Renderer</a> ()</td></tr>
@@ -108,9 +115,27 @@ $(function() {
 <tr class="separator:a3ead191b35ce165aafc35ea97c28c1ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2cbfe2e832a380a7db51d9194868890d"><td class="memItemLeft" align="right" valign="top">UINT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_renderer.html#a2cbfe2e832a380a7db51d9194868890d">GetCbrSrvDescriptorSize</a> () const</td></tr>
 <tr class="separator:a2cbfe2e832a380a7db51d9194868890d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa7aedf2d8a4276c2134a109141d215b7"><td class="memItemLeft" align="right" valign="top">UINT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_renderer.html#aa7aedf2d8a4276c2134a109141d215b7">GetSamplerDescriptorSizze</a> () const</td></tr>
-<tr class="separator:aa7aedf2d8a4276c2134a109141d215b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71eca6b45fe53b0e068c5d274bd3d869"><td class="memItemLeft" align="right" valign="top">UINT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_renderer.html#a71eca6b45fe53b0e068c5d274bd3d869">GetSamplerDescriptorSize</a> () const</td></tr>
+<tr class="separator:a71eca6b45fe53b0e068c5d274bd3d869"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">列挙型メンバ詳解</h2>
+<a id="a0dacbddcf4e3545312bfe18e00383b7f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0dacbddcf4e3545312bfe18e00383b7f">&#9670;&nbsp;</a></span>anonymous enum</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">anonymous enum</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="a0dacbddcf4e3545312bfe18e00383b7faf562c7cbe78f97fd74eb79e0d006c354"></a>FRAME_BUFFER_COUNT&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
 <h2 class="groupheader">構築子と解体子</h2>
 <a id="a7ebf46f54dab9905f79b80f7fddb76a6"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7ebf46f54dab9905f79b80f7fddb76a6">&#9670;&nbsp;</a></span>Renderer()</h2>
@@ -298,14 +323,14 @@ $(function() {
 
 </div>
 </div>
-<a id="aa7aedf2d8a4276c2134a109141d215b7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa7aedf2d8a4276c2134a109141d215b7">&#9670;&nbsp;</a></span>GetSamplerDescriptorSizze()</h2>
+<a id="a71eca6b45fe53b0e068c5d274bd3d869"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a71eca6b45fe53b0e068c5d274bd3d869">&#9670;&nbsp;</a></span>GetSamplerDescriptorSize()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">UINT Renderer::GetSamplerDescriptorSizze </td>
+          <td class="memname">UINT Renderer::GetSamplerDescriptorSize </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -340,6 +365,10 @@ $(function() {
 
 <p>初期化関数 </p>
 <p>初期化処理 </p>
+<p>デバイスにアクセスするためのインターフェースを作成</p>
+<p>D3Dデバイスの作成</p>
+<p>D3Dデバイスの作成に失敗</p>
+<p>コマンドキューの作成</p>
 
 </div>
 </div>
@@ -360,8 +389,6 @@ $(function() {
 </div><div class="memdoc">
 
 <p>オブジェクトを登録する </p>
-<p><br  />
- </p>
 
 </div>
 </div>

@@ -4,6 +4,12 @@
 
 {\ttfamily \#include $<$Renderer.\+h$>$}
 
+\doxysubsection*{公開型}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \mbox{\hyperlink{class_renderer_a0dacbddcf4e3545312bfe18e00383b7faf562c7cbe78f97fd74eb79e0d006c354}{FRAME\+\_\+\+BUFFER\+\_\+\+COUNT}} = 2
+ \}
+\end{DoxyCompactItemize}
 \doxysubsection*{公開メンバ関数}
 \begin{DoxyCompactItemize}
 \item 
@@ -35,8 +41,21 @@ ID3\+D12\+Graphics\+Command\+List4 $\ast$ \mbox{\hyperlink{class_renderer_a3ead1
 \item 
 UINT \mbox{\hyperlink{class_renderer_a2cbfe2e832a380a7db51d9194868890d}{Get\+Cbr\+Srv\+Descriptor\+Size}} () const
 \item 
-UINT \mbox{\hyperlink{class_renderer_aa7aedf2d8a4276c2134a109141d215b7}{Get\+Sampler\+Descriptor\+Sizze}} () const
+UINT \mbox{\hyperlink{class_renderer_a71eca6b45fe53b0e068c5d274bd3d869}{Get\+Sampler\+Descriptor\+Size}} () const
 \end{DoxyCompactItemize}
+
+
+\doxysubsection{列挙型メンバ詳解}
+\mbox{\Hypertarget{class_renderer_a0dacbddcf4e3545312bfe18e00383b7f}\label{class_renderer_a0dacbddcf4e3545312bfe18e00383b7f}} 
+\doxysubsubsection{\texorpdfstring{anonymous enum}{anonymous enum}}
+{\footnotesize\ttfamily anonymous enum}
+
+\begin{DoxyEnumFields}{列挙値}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FRAME\_BUFFER\_COUNT@{FRAME\_BUFFER\_COUNT}!Renderer@{Renderer}}\index{Renderer@{Renderer}!FRAME\_BUFFER\_COUNT@{FRAME\_BUFFER\_COUNT}}}\mbox{\Hypertarget{class_renderer_a0dacbddcf4e3545312bfe18e00383b7faf562c7cbe78f97fd74eb79e0d006c354}\label{class_renderer_a0dacbddcf4e3545312bfe18e00383b7faf562c7cbe78f97fd74eb79e0d006c354}} 
+FRAME\+\_\+\+BUFFER\+\_\+\+COUNT&\\
+\hline
+
+\end{DoxyEnumFields}
 
 
 \doxysubsection{構築子と解体子}
@@ -115,11 +134,11 @@ UINT \mbox{\hyperlink{class_renderer_aa7aedf2d8a4276c2134a109141d215b7}{Get\+Sam
 \doxysubsubsection{\texorpdfstring{GetD3DDevice()}{GetD3DDevice()}}
 {\footnotesize\ttfamily ID3\+D12\+Device5$\ast$ Renderer\+::\+Get\+D3\+DDevice (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{class_renderer_aa7aedf2d8a4276c2134a109141d215b7}\label{class_renderer_aa7aedf2d8a4276c2134a109141d215b7}} 
-\index{Renderer@{Renderer}!GetSamplerDescriptorSizze@{GetSamplerDescriptorSizze}}
-\index{GetSamplerDescriptorSizze@{GetSamplerDescriptorSizze}!Renderer@{Renderer}}
-\doxysubsubsection{\texorpdfstring{GetSamplerDescriptorSizze()}{GetSamplerDescriptorSizze()}}
-{\footnotesize\ttfamily UINT Renderer\+::\+Get\+Sampler\+Descriptor\+Sizze (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+\mbox{\Hypertarget{class_renderer_a71eca6b45fe53b0e068c5d274bd3d869}\label{class_renderer_a71eca6b45fe53b0e068c5d274bd3d869}} 
+\index{Renderer@{Renderer}!GetSamplerDescriptorSize@{GetSamplerDescriptorSize}}
+\index{GetSamplerDescriptorSize@{GetSamplerDescriptorSize}!Renderer@{Renderer}}
+\doxysubsubsection{\texorpdfstring{GetSamplerDescriptorSize()}{GetSamplerDescriptorSize()}}
+{\footnotesize\ttfamily UINT Renderer\+::\+Get\+Sampler\+Descriptor\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
 \mbox{\Hypertarget{class_renderer_a24e60dfccf32b9cfa5de30f977fb59d1}\label{class_renderer_a24e60dfccf32b9cfa5de30f977fb59d1}} 
 \index{Renderer@{Renderer}!Initialize@{Initialize}}
@@ -131,7 +150,13 @@ UINT \mbox{\hyperlink{class_renderer_aa7aedf2d8a4276c2134a109141d215b7}{Get\+Sam
 
 初期化関数 
 
-初期化処理 \mbox{\Hypertarget{class_renderer_a9619f50269a0f79fe1b6aa431dbeb363}\label{class_renderer_a9619f50269a0f79fe1b6aa431dbeb363}} 
+初期化処理 デバイスにアクセスするためのインターフェースを作成
+
+D3\+Dデバイスの作成
+
+D3\+Dデバイスの作成に失敗
+
+コマンドキューの作成\mbox{\Hypertarget{class_renderer_a9619f50269a0f79fe1b6aa431dbeb363}\label{class_renderer_a9619f50269a0f79fe1b6aa431dbeb363}} 
 \index{Renderer@{Renderer}!Register@{Register}}
 \index{Register@{Register}!Renderer@{Renderer}}
 \doxysubsubsection{\texorpdfstring{Register()}{Register()}}
@@ -141,8 +166,7 @@ UINT \mbox{\hyperlink{class_renderer_aa7aedf2d8a4276c2134a109141d215b7}{Get\+Sam
 
 オブジェクトを登録する 
 
-~\newline
- \mbox{\Hypertarget{class_renderer_a6851911a1220c6f62742aa8e1a4678ba}\label{class_renderer_a6851911a1220c6f62742aa8e1a4678ba}} 
+\mbox{\Hypertarget{class_renderer_a6851911a1220c6f62742aa8e1a4678ba}\label{class_renderer_a6851911a1220c6f62742aa8e1a4678ba}} 
 \index{Renderer@{Renderer}!Unregister@{Unregister}}
 \index{Unregister@{Unregister}!Renderer@{Renderer}}
 \doxysubsubsection{\texorpdfstring{Unregister()}{Unregister()}}
